@@ -14,6 +14,7 @@ Validated on Windows 11 x64 with Node.js 24.21.0, npm 11.19.0, Electron 44.4.1 a
 | Portable EXE | Launched the self-extracting EXE on Windows and visually confirmed the dashboard and retained five-question learning record using the isolated test profile. |
 | Packaged assets | All 96 files extracted from `app.asar` match `dist/web/`; inherited notices are included. |
 | Windows artifacts | Portable EXE and NSIS installer built; SHA-256 values are recorded in `dist/desktop/SHA256SUMS.txt`. Both builds are unsigned. |
+| Fresh Git checkout | A separate local clone completed `npm ci`, content regeneration (no changes), static checks, all 10 Node tests, web build, and original-file verification. Its working tree remained clean. |
 
 The shared functional flow checks the final 4,860-question/460-lesson curriculum, a real five-question lesson, a draft restored after reload, 7 earned points, a readable Chinese-named JSON export, redemption of 4 points for two game minutes, all 11 game entry screens, chess/stick-fighting startup, game fullscreen, language switching, and a retained balance of 3 points. Desktop tests also verify persistence across a complete process restart. No uncaught application JavaScript errors were recorded. Desktop runs recorded no external network origins.
 
