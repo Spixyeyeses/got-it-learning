@@ -54,7 +54,7 @@ These builds are **unsigned**. Windows may display a publisher or SmartScreen wa
 
 `verify:original` establishes the preserved baseline. After deliberately editing an application file, a difference is expected; do not rewrite the original manifest to disguise that change. See [contributing](CONTRIBUTING.md).
 
-For browser tests, first run `npm run build:web` and `npx playwright install chromium` (an installed Windows Edge is also supported). Desktop tests use an isolated synthetic profile; set `GOT_IT_EXECUTABLE` to a packaged app path to test that build. GitHub Actions is configured to test and build both distributions after upload; it does not publish GitHub Releases.
+For browser tests, first run `npm run build:web` and `npx playwright install chromium` (an installed Windows Edge is also supported). Desktop tests use an isolated synthetic profile; set `GOT_IT_EXECUTABLE` to a packaged app path to test that build. GitHub Actions is configured to test and build both distributions; it does not publish GitHub Releases. Check the workflow results for each commit rather than assuming a successful remote build.
 
 ## What is included
 
@@ -82,7 +82,9 @@ Optional cloud accounts, synchronization, friends, and leaderboards still refer 
 
 ## Repository and release status
 
-This repository is prepared for a later GitHub upload. Building does not create a remote repository, push commits, or publish releases. Keep `node_modules/` and `dist/` out of Git; attach built installers/executables as release assets when a release is authorized.
+The [development repository](https://github.com/Spixyeyeses/got-it-learning) is private. Source and its history are stored in Git; `node_modules/` and `dist/` remain excluded. The Windows portable executable, installer, and SHA-256 checksums are attached to a [draft release](https://github.com/Spixyeyeses/got-it-learning/releases) for maintainer review and download. Draft access requires appropriate repository permissions.
+
+Build commands and CI do not automatically push commits or publish releases. Publishing a draft release is a separate, deliberate step.
 
 No project-wide open-source license was supplied. Existing notices are retained, including a curriculum notice that says redistribution is not granted. The project owner needs to resolve publication rights before public sharing. See [third-party and inherited notices](docs/THIRD_PARTY_NOTICES.md).
 

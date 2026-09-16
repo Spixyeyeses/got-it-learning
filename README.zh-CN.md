@@ -54,7 +54,7 @@ npm run build:win
 
 以后有意修改应用文件时，`verify:original` 出现差异是正常的。原始哈希清单用于追溯，不应为了消除差异而重写。开发流程见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
-网页测试前先执行 `npm run build:web` 与 `npx playwright install chromium`；Windows 上也支持已安装的 Edge。桌面测试使用独立的模拟用户存储，不影响日常存档。设置 `GOT_IT_EXECUTABLE` 为打包后的程序路径可测试构建产物。仓库已配置 GitHub Actions，上传后会检查并构建两种版本，但不会发布 GitHub Release。
+网页测试前先执行 `npm run build:web` 与 `npx playwright install chromium`；Windows 上也支持已安装的 Edge。桌面测试使用独立的模拟用户存储，不影响日常存档。设置 `GOT_IT_EXECUTABLE` 为打包后的程序路径可测试构建产物。仓库已配置 GitHub Actions，用于检查并构建两种版本，但不会发布 GitHub Release。每次提交的远程构建是否成功，以对应的工作流结果为准。
 
 ## 目录与可编辑内容
 
@@ -82,7 +82,9 @@ npm run build:win
 
 ## GitHub 与发布
 
-本仓库为之后上传 GitHub 做准备。构建命令不会创建远程仓库、推送提交或发布版本。`node_modules/` 与 `dist/` 不提交到 Git；正式发布时可将安装程序和免安装程序作为 Release 附件。
+[开发仓库](https://github.com/Spixyeyeses/got-it-learning)为私有仓库。源码与修改历史通过 Git 管理，`node_modules/` 与 `dist/` 不提交到 Git。Windows 免安装程序、安装程序与 SHA-256 校验文件作为 [Release 草稿](https://github.com/Spixyeyeses/got-it-learning/releases)附件，供维护者审核和下载；查看草稿需要相应的仓库权限。
+
+构建命令与 CI 不会自动推送提交或发布版本。正式发布 Release 草稿需要单独执行。
 
 原包没有提供整个项目的开源许可证。既有声明已保留，其中课程包明确写有未授予再分发权利；公开分享前需要由项目所有者确认发布权利。详见 [第三方与原有权利声明](docs/THIRD_PARTY_NOTICES.md)。
 
