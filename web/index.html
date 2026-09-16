@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b1713">
+  <meta name="description" content="学会啦：按课程、知识点、订正与间隔复习建立真实掌握。">
+  <title>学会啦 - 智能学习系统</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" href="styles/learning-v2.css">
+  <link rel="stylesheet" href="styles/shell-v11.css">
+  <link rel="stylesheet" href="styles/tactile-v8.css">
+  <link rel="stylesheet" href="styles/icon-controls-v9.css">
+</head>
+<body>
+  <a class="skip-link" href="#home">跳到主要学习内容</a>
+  <main class="app app-v2" id="appMain">
+    <header class="header v2-header">
+      <button class="brand brand-button" type="button" onclick="goHome()" aria-label="返回学习首页">
+        <span class="brand-copy"><strong id="brandName">学会啦</strong><small>学习系统</small></span>
+        <span class="admin-badge" id="adminBadge">管理员</span><span id="crumb" class="crumb"></span>
+      </button>
+      <div class="header-actions"><span id="contentSourceBadge" class="content-source-badge">内容源校验中</span><button id="accountButton" class="account-entry" type="button" onclick="openAccount()">☁ 未配置</button><details class="tools-menu-v4"><summary>更多</summary><div><button id="friendsButton" class="social-entry" type="button" onclick="openFriends()" hidden>好友</button><button id="leaderboardButton" class="social-entry" type="button" onclick="openLeaderboard()" hidden>排行榜</button><button id="syncButton" class="sync-entry" type="button" onclick="manualRemoteSync()" title="同步学习记录与课程内容">同步数据</button><button id="adminEntry" class="admin-entry" type="button" onclick="openAdmin()">管理设置</button><div id="langToggle" class="lang"><button id="en" onclick="setLang('en')">EN</button><button id="zh" class="active" onclick="setLang('zh')">中</button></div></div></details></div>
+    </header>
+    <div id="error" class="error"></div>
+
+    <section id="home" class="home-v2">
+      <section class="data-board-v4" aria-labelledby="dataOverviewTitle">
+        <header class="data-board-head-v4"><div><p id="dashboardDateV4">今日学习数据</p><h1 id="dataOverviewTitle">学习概览</h1><span id="growthRank">成长阶段 · 初见者</span></div><div class="data-board-side-v6"><button id="equippedTitleCardV6" class="equipped-title-card-v6" type="button" onclick="openEquippedAchievementV6()" hidden><span class="equipped-title-seal-v6">✦</span><span><small>当前称号</small><strong id="equippedTitle"></strong></span><b>查看</b></button><div class="data-board-state-v4"><span id="dataFreshnessV4">数据保存在本机</span><button type="button" onclick="openWeeklyReportV3()">查看本周报告</button></div></div></header>
+        <button id="titleHomeIdentityV7" class="title-home-identity-v7" type="button" onclick="openEquippedAchievementV6()" hidden aria-label="查看当前装备称号">
+          <img id="titleHomeArtV7" src="" alt="" decoding="async">
+          <span class="title-home-film-v7" aria-hidden="true"></span>
+          <span class="title-home-copy-v7"><small id="titleHomeTierV7">当前装备</small><strong id="titleHomeNameV7">成长称号</strong><em id="titleHomeEnglishV7">ACTIVE TITLE</em><span id="titleHomeDescriptionV7">完成学习目标后获得</span></span>
+          <span class="title-home-mark-v7" aria-hidden="true"><i id="titleHomeSealV7">✦</i><small id="titleHomeMarkStateV7">正在展示</small></span>
+          <span class="title-home-action-v7">查看称号档案 <b>→</b></span>
+        </button>
+        <section class="data-kpis-v4" aria-label="关键学习指标">
+          <article><small id="todayLabel">今日完成题目</small><strong id="today">0</strong><span>题</span></article>
+          <article><small id="accuracyLabel">整体正确率</small><strong id="accuracy">0%</strong><span>累计作答</span></article>
+          <article><small>平均掌握度</small><strong id="masteryAverage">0%</strong><span>已学习知识点</span></article>
+          <article><small id="streakLabel">连续学习天数</small><strong id="streak">0</strong><span>天</span></article>
+        </section>
+        <div class="data-grid-v4">
+          <article class="data-panel-v4 weekly-chart-panel-v4"><header><div><small>最近 7 天</small><h2>学习与休息时长</h2></div><div class="chart-legend-v4"><span><i class="study"></i>学习</span><span><i class="play"></i>休息</span></div></header><div id="weeklyActivityChartV4" class="weekly-chart-v4" role="img" aria-label="最近七天学习与受控休息时长柱状图"></div></article>
+          <article class="data-panel-v4 next-action-panel-v4"><header><div><small id="smartPlanActionKicker">下一步</small><h2 id="smartPlanTitle">今天最值得先做</h2></div><span id="todayPlanStatus">0 / 2 节</span></header><p id="smartPlanCopy">优先处理遗忘风险和错题，再推进新课。</p><div id="smartPlanMetrics" class="smart-plan-metrics"></div><button id="smartPlanAction" class="data-primary-action-v4" type="button" onclick="openNextSmartActionV3()"><span><strong id="smartPlanActionLabel">开始今日学习</strong><small id="continueHint">约 6 分钟</small></span><b>→</b></button><div class="data-secondary-actions-v4"><button type="button" onclick="openLearningPathV3()">知识路径</button><button type="button" onclick="document.getElementById('courseLibrary').scrollIntoView({behavior:'smooth'})">全部课程</button></div><span id="continueLabel" hidden>继续今日学习</span><span id="wrongCountLabel" hidden>暂无待订正</span></article>
+          <article class="data-panel-v4 subject-chart-panel-v4"><header><div><small>长期进度</small><h2>学科掌握度</h2></div><button type="button" onclick="openLearningPathV3()">查看路径</button></header><div id="subjectMasteryChartV4" class="subject-chart-v4"></div></article>
+          <article class="data-panel-v4 time-balance-panel-v4"><header><div><small>今天</small><h2>时间分配</h2></div></header><div id="timeBalanceV4" class="time-balance-v4"></div></article>
+          <article class="data-panel-v4 recent-activity-panel-v4"><header><div><small>学习记录</small><h2>最近做了什么</h2></div><button type="button" onclick="openUsage()">完整记录</button></header><div id="recentLearningV4" class="recent-learning-v4"></div></article>
+        </div>
+      </section>
+
+      <section id="courseLibrary" class="course-library"><div class="section-heading"><div><span class="section-kicker">课程</span><h2 class="title" id="homeTitle">选择课程</h2><p class="subtitle" id="homeSubtitle">按年级、课次与知识点继续学习。</p></div><span class="section-note">每天 1–3 节即可</span></div><div class="subjects subjects-v2"><button class="subject subject-math" id="mathCard" type="button" onclick="selectSubject('math')"><span class="subject-top"><span class="icon">Σ</span><span class="subject-progress" id="mathProgress">0%</span></span><strong id="mathTitle">数学</strong><small id="mathDesc">从数感到推理，把每一步都说清楚</small><span class="subject-meta" id="mathMeta">12 个课程阶段</span><span class="subject-action">进入课程 <b>→</b></span></button><button class="subject subject-english" id="englishCard" type="button" onclick="selectSubject('english')"><span class="subject-top"><span class="icon">Aa</span><span class="subject-progress" id="englishProgress">0%</span></span><strong id="englishTitle">英语</strong><small id="englishDesc">词汇、语法与阅读，在语境中理解</small><span class="subject-meta" id="englishMeta">25 个课程阶段</span><span class="subject-action">进入课程 <b>→</b></span></button><button class="subject subject-science" id="scienceCard" type="button" onclick="selectSubject('science')"><span class="subject-top"><span class="icon">⌁</span><span class="subject-progress" id="scienceProgress">0%</span></span><strong id="scienceTitle">科学</strong><small id="scienceDesc">从观察证据到建立科学解释</small><span class="subject-meta" id="scienceMeta">12 个课程阶段</span><span class="subject-action">进入课程 <b>→</b></span></button></div><section class="curriculum-registry-v3 is-collapsed" aria-labelledby="curriculumRegistryTitleV3"><header><div><span class="section-kicker">国家课程目录 · V3</span><h3 id="curriculumRegistryTitleV3">中国大陆课程标准总目录</h3><p>日常只展示正在学习的课程；完整目录、教材版本和来源信息按需展开。</p></div><div id="curriculumSourceStatusV3" class="curriculum-source-status-v3"><strong>正在校验课程目录</strong><span>读取教育部课程标准来源</span></div></header><div id="subjectCatalogV3" class="curriculum-subject-grid-v3" aria-live="polite" hidden></div></section></section>
+
+      <section class="home-extras home-extras-v2" aria-labelledby="familyToolsTitleV6">
+        <div class="home-extras-heading-v6"><div><span class="section-kicker">家庭工具</span><h2 id="familyToolsTitleV6">进度可核验，使用有边界</h2></div><p>学习证据、内容来源和时间规则都能随时查看。</p></div>
+        <div class="family-tools-grid-v6">
+          <button class="game-entry guardian-entry guardian-primary-v6" type="button" onclick="openGuardian()"><span class="game-entry-copy"><span class="game-entry-icon">盾</span><span><span class="game-entry-title" id="guardianEntryTitle">家长安心报告</span><span class="game-entry-sub" id="guardianEntrySub">目标、时间、掌握依据与内容来源一页看清</span></span></span><span class="game-entry-arrow">查看报告 →</span></button>
+          <button class="game-entry usage-entry" type="button" onclick="openUsage()"><span class="game-entry-copy"><span class="game-entry-icon">◷</span><span><span class="game-entry-title" id="usageEntryTitle">学习回顾</span><span class="game-entry-sub" id="usageEntrySub">查看专注时间、课程记录与掌握变化</span></span></span><span class="game-entry-arrow">→</span></button>
+          <button class="game-entry privacy-entry" type="button" onclick="openPrivacyCenterV3()"><span class="game-entry-copy"><span class="game-entry-icon">锁</span><span><span class="game-entry-title">隐私与数据</span><span class="game-entry-sub">导出、删除、监护确认与本机诊断</span></span></span><span class="game-entry-arrow">→</span></button>
+        </div>
+        <button class="game-entry reward-card rest-entry-v6" type="button" onclick="openExchange()"><span class="game-entry-copy"><span class="game-entry-icon">◈</span><span><span class="game-entry-title" id="gameEntryTitle">受控休息区</span><span class="game-entry-sub" id="gameEntrySub">完成学习后，用专注积分安排一段有上限的休息时间</span><span class="points-pill">✦ <span id="gamePointBalance">0</span> <span id="gamePointUnit">积分</span><span id="pointsStat" hidden>0</span><span id="pointsLabel" hidden>专注积分</span></span><span id="badges" class="badges" hidden></span></span></span><span class="rest-entry-side-v6"><small>次要功能</small><strong>安排休息 →</strong></span></button>
+        <div class="achievement-entry title-entry-v5" id="achievementEntry"><button class="achievement-toggle" onclick="toggleAchievements()"><span class="achievement-entry-icon" id="achievementEntryIcon">✧</span><span class="achievement-toggle-copy"><span class="achievement-kicker" id="achievementKicker">成长档案</span><span class="achievement-title" id="achievementHeading">称号展柜</span></span><span class="achievement-chevron" id="achievementChevron">▾</span></button><div id="achievementPanel" class="achievement-panel title-vault-v5" hidden><div class="title-vault-head-v5"><div><small>TITLE VAULT</small><h3>成长称号</h3></div><p id="achievementSummary" class="achievement-summary"></p></div><div id="achievementGrid" class="achievement-grid title-grid-v5"></div></div></div>
+      </section>
+      <button id="mobileContinueDockV4" class="mobile-continue-dock-v4" type="button" onclick="openNextSmartActionV3()"><span><small id="mobileContinueKickerV4">今天下一步</small><strong id="mobileContinueLabelV4">开始今日学习</strong></span><b>→</b></button>
+    </section>
+
+    <section id="setup" class="course-view" hidden><div class="course-view-head"><button class="back-link" id="setupHome" type="button" onclick="goHome()">← 学习首页</button><span id="courseSubjectMark" class="course-subject-mark">Σ</span><div><span class="section-kicker" id="courseKicker">MATHEMATICS PATH</span><h1 id="courseTitle">数学课程</h1><p id="setupNote">选择一个阶段，再从一节小课开始。</p></div></div><div class="course-layout"><aside class="level-panel"><label for="levels">课程阶段</label><select id="levels" onchange="populateLessons()"></select><div class="level-insight"><span>阶段掌握度</span><strong id="levelMastery">0%</strong><div><i id="levelMasteryBar"></i></div></div><p>每一课先用短讲解学会方法，再进入练习和订正。</p></aside><section class="lesson-browser"><div class="lesson-browser-head"><div><span class="section-kicker">MICRO LESSONS</span><h2>选择一节课</h2></div><span id="lessonCount">0 节</span></div><div id="lessonGrid" class="lesson-grid"></div></section><aside id="lessonPreview" class="lesson-preview"><span class="lesson-number" id="lessonNumber">第 1 课</span><h2 id="lessonTitle">选择一节课开始</h2><p id="lessonDescription">先学习核心方法和完整例题，再用代表性题目练习。</p><div class="lesson-facts"><span><b id="lessonQuestionCount">5</b> 道精练</span><span><b id="lessonMastery">0%</b> 当前掌握</span></div><button id="start" class="primary-cta lesson-start" onclick="beginLessonFlowV3()" disabled>先学方法 <span>→</span></button></aside></div></section>
+
+    <section id="lessonDemoView" class="lesson-demo-view" hidden aria-labelledby="lessonDemoTitle">
+      <header class="lesson-demo-head"><button class="back-link" id="demoBack" type="button" onclick="closeLessonDemoV3()">← 返回课程</button><div class="lesson-demo-identity"><span id="lessonDemoLabel">知识点微课 · 先学后练</span><h1 id="lessonDemoTitle">知识点</h1><p id="lessonDemoGoal">先真正理解，再开始练习。</p></div><span class="lesson-demo-duration" id="lessonDemoDuration">约 3 分钟</span></header>
+      <ol class="lesson-flow-v3" aria-label="本节课流程"><li class="active"><i>1</i><span>理解知识</span></li><li><i>2</i><span>看现有题</span></li><li><i>3</i><span>独立练习</span></li></ol>
+      <div class="lesson-demo-content">
+        <section class="demo-concept-v3">
+          <div class="demo-knowledge-grid-v1"><article><span>它是什么</span><h2 id="lessonDemoDefinition">核心定义</h2></article><article class="demo-core-v1"><span>核心内容 / 公式</span><p id="lessonDemoCore"></p></article><article><span>什么时候用</span><p id="lessonDemoWhen"></p></article></div>
+          <div id="lessonDemoVisual"></div>
+          <div class="demo-method-v1"><span>具体怎么用</span><div id="lessonDemoSteps" class="demo-steps-v3"></div></div>
+        </section>
+        <aside class="demo-side-v3">
+          <section class="demo-example-v3"><span>取自当前题库 · 示范一题</span><h2 id="lessonDemoExamplePrompt">例题</h2><div id="lessonDemoExampleSteps"></div><strong id="lessonDemoExampleAnswer">答案</strong></section>
+          <section class="demo-takeaway-v3"><span>一眼记住</span><p id="lessonDemoTakeaway"></p></section>
+          <section class="demo-mistake-v3"><span>最容易错</span><p id="lessonDemoMistake"></p></section>
+        </aside>
+      </div>
+      <footer class="lesson-demo-actions"><button class="quiet-cta" type="button" onclick="closeLessonDemoV3()">换一节课</button><button id="lessonDemoStart" class="primary-cta" type="button" onclick="startQuiz()">我懂了，开始练习 <span>→</span></button></footer>
+    </section>
+
+    <section id="quizView" class="practice-view" hidden><header class="practice-head"><button class="back-link" id="backToSetup" type="button" onclick="returnToSetup()">← 返回课程</button><div class="practice-title"><span id="practiceLessonLabel">微课练习</span><strong id="practiceLessonTitle">知识点</strong></div><button class="quiet-cta" id="quizHome" type="button" onclick="goHome()">稍后继续</button></header><div class="practice-progress"><div id="dots" class="dots"></div><span id="practiceProgressText">1 / 5</span></div><div id="score" class="score" aria-live="polite"></div><div id="quiz" class="quiz quiz-v2"><div id="content"></div></div><div class="nav practice-nav"><button class="outline" id="prev" onclick="nav(-1)">上一题</button><button id="next" onclick="nav(1)">下一题</button><button id="submit" class="submit-practice" onclick="submitQuiz()">完成并查看掌握度</button></div></section>
+  </main>
+  <section id="exchangeModal" class="exchange-modal" hidden aria-modal="true" role="dialog" aria-labelledby="exchangeTitle">
+    <div class="exchange-card">
+      <button class="exchange-close icon-close-v9" type="button" onclick="closeExchange()" aria-label="关闭"><span class="close-glyph-v9" aria-hidden="true"></span></button>
+      <div class="exchange-icon">🎟️</div>
+      <h2 id="exchangeTitle">安排休息时间</h2>
+      <p id="exchangeCopy" class="exchange-copy">每 2 积分可兑换 1 分钟专注休息时间。</p>
+      <div class="exchange-balance"><span id="exchangeBalanceLabel">当前积分</span><strong><span id="exchangePoints">0</span> <span id="exchangePointUnit">积分</span></strong></div>
+      <div id="exchangePurchase">
+        <div id="exchangePicker" class="exchange-picker"><label><span id="exchangeMinutesLabel">兑换时长</span><select id="exchangeMinutes" onchange="updateExchangeCost()"></select></label><div class="exchange-cost"><span id="exchangeCost">2</span> <span id="exchangeCostUnit">积分</span></div></div>
+        <button id="exchangeAction" class="exchange-action" type="button" onclick="redeemGameTime()">兑换并进入休息区</button>
+      </div>
+      <div id="exchangeActive" class="exchange-active" hidden></div>
+      <p id="exchangeNote" class="exchange-note">积分来自课程完成、首次掌握与明显进步，不鼓励机械重复刷题。</p>
+    </div>
+  </section>
+  <section id="usageModal" class="usage-modal" hidden aria-modal="true" role="dialog" aria-labelledby="usageTitle">
+    <div class="usage-card">
+      <button class="exchange-close icon-close-v9" type="button" onclick="closeUsage()" aria-label="关闭"><span class="close-glyph-v9" aria-hidden="true"></span></button>
+      <div style="font-size:2.4rem">📊</div>
+      <h2 id="usageTitle">使用记录</h2>
+      <p id="usageCopy" class="usage-copy">查看学习与受控休息的时间分配，以及完成过的课程阶段。</p>
+      <div class="usage-tabs"><button id="usageTodayTab" class="active" type="button" onclick="setUsageRange('today')">今日</button><button id="usageWeekTab" type="button" onclick="setUsageRange('week')">本周</button></div>
+      <div id="usageSummary" class="usage-summary"></div>
+      <div id="usageLevels" class="usage-levels"></div>
+    </div>
+  </section>
+  <section id="guardianModal" class="guardian-modal" hidden aria-modal="true" role="dialog" aria-labelledby="guardianTitle">
+    <div class="guardian-card">
+      <button class="exchange-close icon-close-v9" type="button" onclick="closeGuardian()" aria-label="关闭"><span class="close-glyph-v9" aria-hidden="true"></span></button>
+      <header class="guardian-heading"><span>盾</span><div><small id="guardianKicker">GUARDIAN OVERVIEW</small><h2 id="guardianTitle">家长安心报告</h2><p id="guardianCopy">不看刷了多少，只看时间是否健康、知识是否真正掌握。</p></div></header>
+      <div id="guardianSummary" class="guardian-summary" aria-live="polite"></div>
+      <div id="guardianTrust" class="guardian-trust"></div>
+      <div class="guardian-actions"><button class="quiet-cta" type="button" onclick="closeGuardian();openWeeklyReportV3()">查看本周报告</button><button class="quiet-cta" type="button" onclick="closeGuardian();openUsage()" id="guardianDetailsButton">查看详细记录</button><button class="primary-cta" type="button" onclick="closeGuardian();openAdmin()" id="guardianSettingsButton">调整守护设置</button></div>
+    </div>
+  </section>
+  <section id="titleDetailModal" class="title-detail-modal-v6" hidden aria-modal="true" role="dialog" aria-labelledby="titleDetailName">
+    <div id="titleDetailStage" class="title-detail-stage-v6">
+      <button class="title-detail-close-v6 icon-close-v9" type="button" onclick="closeAchievementDetailV6()" aria-label="关闭称号详情"><span class="close-glyph-v9" aria-hidden="true"></span></button>
+      <div class="title-detail-art-v6" aria-hidden="true"></div>
+      <div class="title-detail-film-v6" aria-hidden="true"></div>
+      <header class="title-detail-meta-v6"><span id="titleDetailTier">珍藏称号</span><span id="titleDetailIndex">NO. 01</span></header>
+      <div class="title-detail-copy-v6"><span id="titleDetailSeal" class="title-detail-seal-v6">✦</span><p id="titleDetailRevealLabel" hidden>新称号已解锁</p><h2 id="titleDetailName">初见者</h2><strong id="titleDetailEnglish">FIRST LIGHT</strong><p id="titleDetailDescription">踏出第一步，学习从这里留下痕迹。</p></div>
+      <div class="title-detail-evidence-v6">
+        <div><small>获得条件</small><p id="titleDetailCondition">完成第一道题</p></div>
+        <div><small>当前进度</small><p id="titleDetailProgressText">0 / 1</p><span class="title-detail-progress-v6"><i id="titleDetailProgressBar"></i></span></div>
+        <div><small>获得记录</small><p id="titleDetailDate">尚未解锁</p></div>
+      </div>
+      <footer class="title-detail-actions-v6"><span id="titleDetailState">继续学习即可解锁</span><button id="titleDetailEquip" type="button" onclick="equipAchievementFromDetailV6()" disabled>尚未解锁</button></footer>
+    </div>
+  </section>
+  <section id="adminModal" class="admin-modal" hidden aria-modal="true" role="dialog" aria-labelledby="adminTitle">
+    <div class="admin-card">
+      <button class="admin-close icon-close-v9" type="button" onclick="closeAdmin()" aria-label="关闭"><span class="close-glyph-v9" aria-hidden="true"></span></button>
+      <div style="font-size:2.4rem">🛡️</div><h2 id="adminTitle">管理员验证</h2><p id="adminCopy" class="admin-copy">输入管理员密令以启用管理模式。</p>
+      <div id="adminLoginView"><form class="admin-form" onsubmit="loginAdmin(event)"><label><span id="adminPasswordLabel">管理员密令</span><input id="adminPassword" type="password" inputmode="numeric" autocomplete="current-password" required></label><button id="adminLoginButton" class="admin-primary" type="submit">进入管理员模式</button></form></div>
+      <div id="adminConsoleView" hidden>
+        <div class="admin-tools">
+          <label><span id="adminPointsLabel">当前积分</span><input id="adminPointsInput" type="number" min="0" step="1"></label>
+          <label><span id="adminCapLabel">积分上限</span><input id="adminCapInput" type="number" min="0" step="1"></label>
+          <label><span id="adminGameMinutesLabel">单次休息区时间上限</span><select id="adminGameMinutesCap"><option value="5">5 分钟</option><option value="10">10 分钟</option><option value="15">15 分钟</option><option value="20">20 分钟</option><option value="30">30 分钟</option><option value="45">45 分钟</option><option value="60">60 分钟</option></select></label>
+          <label><span id="adminDailyLessonGoalLabel">每日微课目标</span><select id="adminDailyLessonGoal"><option value="1">1 节</option><option value="2">2 节</option><option value="3">3 节</option><option value="4">4 节</option><option value="5">5 节</option></select></label>
+          <label><span id="adminDailyPlayCapLabel">每日休息区时间上限</span><select id="adminDailyPlayCap"><option value="5">5 分钟</option><option value="10">10 分钟</option><option value="15">15 分钟</option><option value="20">20 分钟</option><option value="30">30 分钟</option><option value="45">45 分钟</option><option value="60">60 分钟</option></select></label>
+          <label class="admin-free-section"><input id="adminFreeGames" type="checkbox"><span class="admin-free-copy"><strong id="adminFreeGamesTitle">休息区免积分</strong><small id="adminFreeGamesCopy">开启后无需积分即可进入休息区；每日时间上限仍然生效。</small></span></label>
+          <section class="admin-level-section">
+            <div class="admin-level-heading"><div><strong id="adminLevelTitle">允许练习的等级</strong><div id="adminLevelCopy" style="margin-top:4px;color:#8297b3;font-size:.75rem">可按学科多选；孩子只会看到已勾选的等级。</div></div></div>
+            <div id="adminLevelGroups" class="admin-level-groups"></div>
+          </section>
+          <button class="admin-secondary full" type="button" onclick="openContentHealthV3()">查看内容质量与纠错记录</button>
+          <button id="adminSaveButton" class="admin-primary full" type="button" onclick="saveAdminValues()">保存管理设置</button>
+        </div>
+        <div class="admin-divider"></div><div class="admin-secondary-row"><span id="adminActiveText" style="color:#88b9ff;font-weight:800">● 管理员模式已开启</span><button id="adminExitButton" class="admin-exit" type="button" onclick="showAdminExit()">退出管理员模式</button></div><form id="adminExitForm" class="admin-form" hidden onsubmit="logoutAdmin(event)" style="margin-top:16px"><label><span id="adminExitPasswordLabel">重新输入密令以关闭</span><input id="adminExitPassword" type="password" autocomplete="current-password" required></label><button id="adminExitConfirm" class="admin-primary" type="submit">验证并关闭</button></form>
+      </div>
+      <p id="adminMessage" class="admin-message"></p><div class="admin-divider"></div><button id="passwordIcon" class="password-icon" type="button" onclick="togglePasswordChange()">🔑 <span id="passwordIconText">更改密码</span></button>
+      <form id="passwordChangeForm" class="admin-form" hidden onsubmit="changeAdminPassword(event)" style="margin-top:14px"><label><span id="oldPasswordLabel">旧密码</span><input id="oldPassword" type="password" autocomplete="current-password" required></label><label><span id="newPasswordLabel">新密码</span><input id="newPassword" type="password" minlength="4" autocomplete="new-password" required></label><button id="changePasswordButton" class="admin-primary" type="submit">确认更改</button></form>
+    </div>
+  </section>
+  <section id="accountModal" class="account-modal" hidden aria-modal="true" role="dialog" aria-labelledby="accountTitle">
+    <div class="account-card">
+      <button class="exchange-close icon-close-v9" type="button" onclick="closeAccount()" aria-label="关闭"><span class="close-glyph-v9" aria-hidden="true"></span></button>
+      <div class="account-heading"><span>☁</span><div><h2 id="accountTitle">云端账号</h2><p>同步学习存档、好友与积分榜</p></div></div>
+      <p id="accountConfigNotice" class="account-notice"></p>
+      <div id="accountAuthView" class="account-auth">
+        <div id="accountAuthChoice" class="account-auth-choice">
+          <button type="button" onclick="showAccountAuthForm('login')"><span>登录账号</span><small>已有账号，登录并同步云端存档</small><strong>→</strong></button>
+          <button type="button" onclick="showAccountAuthForm('register')"><span>注册账号</span><small>创建新账号并上传本机学习数据</small><strong>→</strong></button>
+        </div>
+        <form id="accountLoginForm" class="account-auth-form" hidden onsubmit="submitAccount(event,'login')"><button class="account-auth-back" type="button" onclick="showAccountAuthForm('')">← 返回</button><h3>登录</h3><label>账户名<input name="username" autocomplete="username" required></label><label>密码<input name="password" type="password" autocomplete="current-password" minlength="8" required></label><button type="submit">登录并同步</button></form>
+        <form id="accountRegisterForm" class="account-auth-form" hidden onsubmit="submitAccount(event,'register')"><button class="account-auth-back" type="button" onclick="showAccountAuthForm('')">← 返回</button><h3>注册</h3><label>账户名<input name="username" autocomplete="username" required></label><label>密码<input name="password" type="password" autocomplete="new-password" minlength="8" required></label><button type="submit">注册并上传本机数据</button></form>
+      </div>
+      <div id="accountSignedView" hidden>
+        <div class="account-identity"><div><small>当前账号</small><strong id="accountUsername"></strong><span id="accountRevision"></span></div><div><button onclick="manualRemoteSync()">立即同步</button><button class="outline" onclick="accountLogout()">退出登录</button></div></div>
+      </div>
+      <p id="accountStatus" class="account-status" aria-live="polite"></p>
+    </div>
+  </section>
+  <section id="friendsModal" class="account-modal social-modal" hidden aria-modal="true" role="dialog" aria-labelledby="friendsTitle">
+    <div class="account-card social-card">
+      <button class="exchange-close icon-close-v9" type="button" onclick="closeFriends()" aria-label="关闭"><span class="close-glyph-v9" aria-hidden="true"></span></button>
+      <div class="account-heading"><span>👥</span><div><h2 id="friendsTitle">好友</h2><p>输入账户名添加好友</p></div></div>
+      <div id="friendsContent"></div>
+      <p id="friendsStatus" class="account-status" aria-live="polite"></p>
+    </div>
+  </section>
+  <section id="leaderboardModal" class="account-modal social-modal" hidden aria-modal="true" role="dialog" aria-labelledby="leaderboardTitle">
+    <div class="account-card social-card">
+      <button class="exchange-close icon-close-v9" type="button" onclick="closeLeaderboard()" aria-label="关闭"><span class="close-glyph-v9" aria-hidden="true"></span></button>
+      <div class="account-heading"><span>🏆</span><div><h2 id="leaderboardTitle">好友排行榜</h2><p>按累计获得积分排名</p></div></div>
+      <div id="leaderboardContent">
+        <div id="leaderboardTabs" class="leaderboard-tabs" aria-label="排行榜周期">
+          <button type="button" data-leaderboard-period="day" onclick="setLeaderboardPeriod('day')" class="active">日榜</button>
+          <button type="button" data-leaderboard-period="week" onclick="setLeaderboardPeriod('week')">周榜</button>
+          <button type="button" data-leaderboard-period="month" onclick="setLeaderboardPeriod('month')">月榜</button>
+        </div>
+        <div id="leaderboardList" class="leaderboard-list" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+  <section id="suiteModal" class="suite-modal" hidden aria-modal="true" role="dialog" aria-labelledby="suiteTitle">
+    <div class="suite-card">
+      <button class="exchange-close icon-close-v9" type="button" onclick="closeSuiteModalV3()" aria-label="关闭"><span class="close-glyph-v9" aria-hidden="true"></span></button>
+      <header class="suite-heading"><span id="suiteIcon">◎</span><div><small id="suiteKicker">LEARNING SYSTEM</small><h2 id="suiteTitle">学习设置</h2><p id="suiteCopy"></p></div></header>
+      <div id="suiteBody" class="suite-body"></div>
+      <p id="suiteStatus" class="suite-status" aria-live="polite"></p>
+    </div>
+  </section>
+  <script src="src/config/content.js"></script>
+  <script src="src/config/learning-ai.js"></script>
+  <script src="src/config/remote.js"></script>
+  <script src="src/shared/remote-client.js"></script>
+  <script src="src/shared/curriculum-contract-v3.js"></script>
+  <script src="src/shared/practice-selector-v3.js"></script>
+  <script src="src/shared/knowledge-lessons-math-v1.js"></script>
+  <script src="src/shared/knowledge-lesson-library-v1.js"></script>
+  <script src="src/shared/knowledge-visuals-v1.js"></script>
+  <script src="src/shared/lesson-demo-v3.js"></script>
+  <script src="src/generated/question-banks.js"></script>
+  <script src="src/generated/curriculum-content.js"></script>
+  <script src="src/app/state.js"></script>
+  <script src="src/app/curriculum-v3.js"></script>
+  <script src="src/app/usage.js"></script>
+  <script src="src/app/bank-loader.js"></script>
+  <script src="src/app/account.js"></script>
+  <script src="src/app/admin.js"></script>
+  <script src="src/app/exchange.js"></script>
+  <script src="src/app/quiz-navigation.js"></script>
+  <script src="src/app/learning-platform.js"></script>
+  <script src="src/app/guardian.js"></script>
+  <script src="src/app/product-suite.js"></script>
+  <script src="src/app/tactile-v8.js"></script>
+  <script src="src/app/bootstrap.js"></script>
+</body>
+</html>

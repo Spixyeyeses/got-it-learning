@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:got-it-learning:schema:curriculum-package-v3",
+  "title": "学会啦课程内容包 V3",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "id", "subjectId", "jurisdiction", "academicSystem", "grade", "term", "provider", "standardRefs", "textbookMapping", "release", "shards"],
+  "properties": {
+    "schemaVersion": { "const": 3 },
+    "id": { "type": "string", "minLength": 1 },
+    "subjectId": { "type": "string", "minLength": 1 },
+    "jurisdiction": { "const": "CN-MAINLAND" },
+    "academicSystem": { "enum": ["6-3", "5-4", "both"] },
+    "grade": { "type": "integer", "minimum": 1, "maximum": 12 },
+    "term": { "enum": ["first", "second", "full-year", "module"] },
+    "provider": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "license", "sourceUrl", "contentKind"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "name": { "type": "string", "minLength": 1 },
+        "license": { "type": "string", "minLength": 1 },
+        "sourceUrl": { "type": "string", "format": "uri" },
+        "contentKind": { "enum": ["original-standard-aligned", "licensed-textbook", "licensed-assessment"] }
+      }
+    },
+    "standardRefs": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "textbookMapping": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "rights"],
+      "properties": {
+        "seriesId": { "type": ["string", "null"] },
+        "isbn": { "type": ["string", "null"] },
+        "status": { "enum": ["not-mapped", "metadata-only", "licensed-mapping"] },
+        "rights": { "enum": ["none", "metadata-only", "licensed"] },
+        "notice": { "type": "string" }
+      }
+    },
+    "release": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["version", "publishedAt", "status", "reviewStage", "reviewedBy"],
+      "properties": {
+        "version": { "type": "string", "minLength": 1 },
+        "publishedAt": { "type": "string", "format": "date-time" },
+        "status": { "enum": ["pilot", "reviewed", "production", "retired"] },
+        "reviewStage": { "enum": ["draft", "structure-checked", "answer-checked", "content-reviewed", "releasable"] },
+        "reviewedBy": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
+      }
+    },
+    "shards": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "url", "kind"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "url": { "type": "string", "minLength": 1 },
+          "kind": { "enum": ["lesson-items", "knowledge", "mixed"] },
+          "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+          "itemCount": { "type": "integer", "minimum": 0 }
+        }
+      }
+    }
+  }
+}

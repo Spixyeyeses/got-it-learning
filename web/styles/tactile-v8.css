@@ -1,0 +1,175 @@
+/* Tactile feedback layered over the modular interface. */
+.tactile-v8 {
+  --touch-x: 50%;
+  --touch-y: 50%;
+  --touch-rx: 0deg;
+  --touch-ry: 0deg;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  transform: perspective(850px) translate3d(0, 0, 0) rotateX(var(--touch-rx)) rotateY(var(--touch-ry));
+  transform-style: preserve-3d;
+  transition: transform .24s cubic-bezier(.2,.75,.2,1), border-color .2s ease, background-color .2s ease, box-shadow .24s ease, color .18s ease, filter .18s ease;
+}
+
+.tactile-v8 > :not(.tactile-light-v8) { position: relative; z-index: 2; }
+.tactile-light-v8 {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0;
+  background:
+    radial-gradient(ellipse 105px 72px at var(--touch-x) var(--touch-y), rgba(244,255,250,.18), rgba(218,246,233,.06) 42%, transparent 72%),
+    radial-gradient(ellipse 230px 132px at var(--touch-x) var(--touch-y), rgba(143,213,183,.07), transparent 72%);
+  mix-blend-mode: screen;
+  pointer-events: none;
+  transition: opacity .2s ease;
+}
+
+.tactile-v8.is-touched-v8 .tactile-light-v8,
+.tactile-v8:focus-visible .tactile-light-v8 { opacity: .78; }
+.tactile-v8.is-touched-v8 { filter: brightness(1.025) saturate(1.025); }
+.tactile-v8.has-depth-v8.is-touched-v8 { transform: perspective(850px) translate3d(0, -4px, 0) rotateX(var(--touch-rx)) rotateY(var(--touch-ry)); }
+.tactile-v8.is-pressed-v8 { transform: perspective(850px) translate3d(0, 0, 0) scale(.978); filter: brightness(1.1); transition-duration: .07s; }
+.tactile-v8.is-confirmed-v8 { filter: brightness(1.085) saturate(1.04); }
+
+.interaction-field-v12 {
+  --field-x: 50%;
+  --field-y: 50%;
+  position: fixed;
+  z-index: 260;
+  display: block;
+  opacity: 0;
+  border: 1px solid rgba(210,243,228,.18);
+  background:
+    radial-gradient(ellipse 96px 64px at var(--field-x) var(--field-y), rgba(244,255,250,.17), rgba(211,244,228,.045) 46%, transparent 74%),
+    radial-gradient(ellipse 210px 118px at var(--field-x) var(--field-y), rgba(128,206,170,.055), transparent 72%);
+  box-shadow: inset 0 1px rgba(255,255,255,.035), 0 0 16px rgba(128,206,170,.045);
+  mix-blend-mode: screen;
+  pointer-events: none;
+  transform: translateZ(0);
+  transition: opacity .13s ease, border-color .15s ease, filter .15s ease;
+}
+.interaction-field-v12.is-visible-v12 { opacity: .74; }
+.interaction-field-v12.is-keyboard-v12 { border-color: rgba(143,213,183,.48); opacity: .86; }
+.interaction-field-v12.is-pressing-v12 {
+  border-color: rgba(228,255,243,.68);
+  filter: brightness(1.28);
+  animation: interactionFieldPressV12 .22s ease-out;
+}
+@keyframes interactionFieldPressV12 {
+  0% { box-shadow: inset 0 0 0 1px rgba(255,255,255,.28), 0 0 20px rgba(143,213,183,.18); }
+  100% { box-shadow: inset 0 1px rgba(255,255,255,.035), 0 0 16px rgba(128,206,170,.045); }
+}
+
+.interaction-burst-v12 {
+  position: fixed;
+  z-index: 280;
+  width: 6px;
+  height: 6px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(247,255,251,.95);
+  box-shadow: 0 0 7px rgba(226,255,241,.82), 0 0 14px rgba(143,213,183,.28);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  animation: tactileCoreV8 .48s ease-out forwards;
+}
+.interaction-burst-v12::before,
+.interaction-burst-v12::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border: 1px solid rgba(224,255,241,.72);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(143,213,183,.16);
+  animation: tactileRingV8 .36s cubic-bezier(.12,.72,.2,1) forwards;
+}
+.interaction-burst-v12::after {
+  inset: -11px;
+  border-color: rgba(143,213,183,.28);
+  box-shadow: none;
+  animation: tactileOuterRingV8 .44s cubic-bezier(.12,.72,.2,1) forwards;
+}
+@keyframes tactileCoreV8 {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(.7); }
+  16% { opacity: 1; }
+  48% { opacity: .72; transform: translate(-50%, -50%) scale(1); }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(.86); }
+}
+@keyframes tactileRingV8 {
+  0% { opacity: 0; transform: scale(.45); }
+  22% { opacity: .84; }
+  100% { opacity: 0; transform: scale(1.72); }
+}
+@keyframes tactileOuterRingV8 {
+  0% { opacity: 0; transform: scale(.55); }
+  20% { opacity: .5; }
+  100% { opacity: 0; transform: scale(1.38); }
+}
+
+.subjects-v2 .subject.tactile-v8.is-touched-v8 {
+  border-color: rgba(160,226,197,.46);
+  background-color: var(--panel-2);
+  box-shadow: 0 20px 42px rgba(0,0,0,.25), 0 0 0 1px rgba(143,213,183,.04), inset 0 1px rgba(255,255,255,.055);
+}
+.subjects-v2 .subject.tactile-v8 .icon,
+.family-tools-grid-v6 .tactile-v8 .game-entry-icon,
+.rest-entry-v6.tactile-v8 .game-entry-icon { transition: transform .22s cubic-bezier(.2,.75,.2,1), color .18s ease, background-color .18s ease; }
+.subjects-v2 .subject.tactile-v8.is-touched-v8 .icon,
+.family-tools-grid-v6 .tactile-v8.is-touched-v8 .game-entry-icon,
+.rest-entry-v6.tactile-v8.is-touched-v8 .game-entry-icon { transform: translateY(-1px) scale(1.06); }
+.subjects-v2 .subject.tactile-v8 .subject-action b,
+.data-primary-action-v4.tactile-v8 b,
+.family-tools-grid-v6 .tactile-v8 .game-entry-arrow { transition: transform .2s ease, color .18s ease; }
+.subjects-v2 .subject.tactile-v8.is-touched-v8 .subject-action b,
+.data-primary-action-v4.tactile-v8.is-touched-v8 b,
+.family-tools-grid-v6 .tactile-v8.is-touched-v8 .game-entry-arrow { transform: translateX(4px); }
+
+.data-primary-action-v4.tactile-v8 .tactile-light-v8 {
+  background: radial-gradient(ellipse 105px 74px at var(--touch-x) var(--touch-y), rgba(255,255,255,.3), transparent 72%);
+  mix-blend-mode: soft-light;
+}
+.data-primary-action-v4.tactile-v8.is-touched-v8 { box-shadow: 0 15px 32px rgba(238,126,105,.3), inset 0 1px rgba(255,255,255,.22); }
+.primary-cta.tactile-v8 .tactile-light-v8,
+.mobile-continue-dock-v4.tactile-v8 .tactile-light-v8 {
+  background: radial-gradient(ellipse 105px 74px at var(--touch-x) var(--touch-y), rgba(255,255,255,.28), transparent 72%);
+  mix-blend-mode: soft-light;
+}
+.primary-cta.tactile-v8.is-touched-v8,
+.mobile-continue-dock-v4.tactile-v8.is-touched-v8 { box-shadow: 0 15px 34px rgba(238,126,105,.28), inset 0 1px rgba(255,255,255,.18); }
+.achievement-toggle.tactile-v8.is-touched-v8 { background-color: rgba(255,255,255,.025); }
+
+.lesson-card.tactile-v8 { overflow: hidden; }
+.lesson-card.tactile-v8 .tactile-light-v8 { background: linear-gradient(90deg, rgba(143,213,183,.095), transparent 74%); }
+.lesson-card.tactile-v8.is-touched-v8 { border-color: rgba(143,213,183,.34); background: rgba(143,213,183,.08); }
+.lesson-card.tactile-v8 > i { transition: transform .2s ease, color .18s ease, background-color .18s ease; }
+.lesson-card.tactile-v8.is-touched-v8 > i { transform: scale(1.06); color: #c6ead9; background: rgba(143,213,183,.12); }
+
+.family-tools-grid-v6 .tactile-v8.is-touched-v8,
+.rest-entry-v6.tactile-v8.is-touched-v8 {
+  opacity: 1;
+  border-color: rgba(143,213,183,.34);
+  background-color: var(--panel-2);
+  box-shadow: 0 14px 30px rgba(0,0,0,.2);
+}
+.curriculum-subject-card-v3.tactile-v8.is-touched-v8,
+.path-node.tactile-v8.is-touched-v8 {
+  border-color: rgba(143,213,183,.34);
+  background-color: #0e1b16;
+  box-shadow: 0 9px 22px rgba(0,0,0,.18);
+}
+
+@media (hover: none), (pointer: coarse) {
+  .tactile-v8 { transform: none; }
+  .tactile-light-v8 { display: none; }
+  .tactile-v8:active { transform: scale(.985); filter: brightness(1.07); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tactile-v8,
+  .tactile-v8 * { transition-duration: .01ms !important; transform: none !important; }
+  .interaction-field-v12 { transition-duration: .01ms !important; }
+  .interaction-burst-v12 { display: none; }
+}

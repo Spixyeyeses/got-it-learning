@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:got-it-learning:schema:curriculum-catalog-v3",
+  "title": "学会啦中国大陆课程目录 V3",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "catalogId", "jurisdiction", "releasedAt", "sources", "standards", "subjects", "textbookSeries", "packages"],
+  "properties": {
+    "schemaVersion": { "const": 3 },
+    "catalogId": { "type": "string", "minLength": 1 },
+    "jurisdiction": { "const": "CN-MAINLAND" },
+    "releasedAt": { "type": "string", "format": "date-time" },
+    "coverageStatus": { "enum": ["seed-registry", "partial", "complete"] },
+    "sources": { "type": "array", "items": { "$ref": "#/$defs/source" }, "minItems": 1 },
+    "standards": { "type": "array", "items": { "$ref": "#/$defs/standard" }, "minItems": 1 },
+    "subjects": { "type": "array", "items": { "$ref": "#/$defs/subject" }, "minItems": 16 },
+    "textbookSeries": { "type": "array", "items": { "$ref": "#/$defs/textbookSeries" } },
+    "packages": { "type": "array", "items": { "$ref": "#/$defs/packageRef" } }
+  },
+  "$defs": {
+    "localizedText": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["zh", "en"],
+      "properties": { "zh": { "type": "string", "minLength": 1 }, "en": { "type": "string", "minLength": 1 } }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "title", "authority", "url", "verifiedAt", "usage"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "title": { "type": "string", "minLength": 1 },
+        "authority": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "format": "uri" },
+        "verifiedAt": { "type": "string", "format": "date" },
+        "usage": { "enum": ["public-standard", "catalog-metadata", "reference-only", "licensed-content"] }
+      }
+    },
+    "standard": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "title", "version", "stage", "effectiveFrom", "sourceId", "documentSubjects"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "title": { "$ref": "#/$defs/localizedText" },
+        "version": { "type": "string", "minLength": 1 },
+        "stage": { "enum": ["compulsory", "upper-secondary"] },
+        "effectiveFrom": { "type": "string", "format": "date" },
+        "sourceId": { "type": "string", "minLength": 1 },
+        "documentSubjects": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
+      }
+    },
+    "subject": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "code", "title", "mark", "standardId", "stages", "availability", "description"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z][a-z0-9_-]+$" },
+        "code": { "type": "string", "minLength": 2 },
+        "title": { "$ref": "#/$defs/localizedText" },
+        "mark": { "type": "string", "minLength": 1, "maxLength": 4 },
+        "standardId": { "type": "string", "minLength": 1 },
+        "additionalStandardIds": { "type": "array", "items": { "type": "string" } },
+        "stages": { "type": "array", "items": { "enum": ["primary", "junior-secondary", "upper-secondary"] }, "minItems": 1 },
+        "typicalGrades": { "type": "array", "items": { "type": "integer", "minimum": 1, "maximum": 12 } },
+        "availability": { "enum": ["national", "regional-choice", "foreign-language-alternative"] },
+        "description": { "$ref": "#/$defs/localizedText" }
+      }
+    },
+    "textbookSeries": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "title", "publisher", "subjectIds", "academicSystems", "catalogSourceId", "contentRights"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "title": { "type": "string", "minLength": 1 },
+        "publisher": { "type": "string", "minLength": 1 },
+        "subjectIds": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "academicSystems": { "type": "array", "items": { "enum": ["6-3", "5-4", "both"] }, "minItems": 1 },
+        "catalogSourceId": { "type": "string", "minLength": 1 },
+        "contentRights": { "enum": ["metadata-only", "licensed", "public-domain"] }
+      }
+    },
+    "packageRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "manifestUrl", "enabled", "priority"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "manifestUrl": { "type": "string", "minLength": 1 },
+        "enabled": { "type": "boolean" },
+        "priority": { "type": "integer", "minimum": 0 },
+        "fallbackPolicy": { "enum": ["overlay", "replace-level", "standalone"] },
+        "subjectId": { "type": "string" },
+        "grade": { "type": "integer", "minimum": 1, "maximum": 12 },
+        "term": { "enum": ["first", "second", "full-year", "module"] },
+        "academicSystems": { "type": "array", "items": { "enum": ["6-3", "5-4", "both"] } },
+        "textbookSeriesId": { "type": ["string", "null"] },
+        "preload": { "type": "boolean" }
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 3,
+  "id": "cn-2022-math-g1-pilot",
+  "subjectId": "math",
+  "jurisdiction": "CN-MAINLAND",
+  "academicSystem": "6-3",
+  "grade": 1,
+  "term": "first",
+  "provider": {
+    "id": "got-it-original-curriculum-lab",
+    "name": "学会啦课程内容实验室",
+    "license": "Platform-original items; redistribution not granted",
+    "sourceUrl": "https://www.moe.gov.cn/srcsite/A26/s8001/202204/t20220420_619921.html",
+    "contentKind": "original-standard-aligned"
+  },
+  "standardRefs": [
+    "cn-compulsory-2022:math:first-stage:number-and-algebra"
+  ],
+  "textbookMapping": {
+    "seriesId": null,
+    "isbn": null,
+    "status": "not-mapped",
+    "rights": "none",
+    "notice": "本包只依据公开课程标准编写原创练习，不复制任何教材正文、插图或原题；取得出版社授权后再建立教材课次映射。"
+  },
+  "release": {
+    "version": "0.2.0",
+    "publishedAt": "2026-08-12T00:00:00.000Z",
+    "status": "pilot",
+    "reviewStage": "releasable",
+    "reviewedBy": [
+      "schema-validation",
+      "answer-consistency-check",
+      "internal-content-review"
+    ]
+  },
+  "shards": [
+    {
+      "id": "g1-first-number-foundation",
+      "url": "./data/curriculum/packages/cn-2022-math-g1-pilot/g1-first-number-foundation.json",
+      "kind": "mixed",
+      "sha256": "c9b4cf641956630344a5dacb2535db213b12a4429994ffd1cd564c7822686d4a",
+      "itemCount": 60
+    }
+  ]
+}

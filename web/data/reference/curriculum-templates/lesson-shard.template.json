@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 3,
+  "packageId": "replace-package-id",
+  "knowledge": [
+    {
+      "id": "REPLACE-KNOWLEDGE-ID",
+      "title": { "zh": "知识点名称", "en": "Knowledge title" },
+      "domain": "replace-domain",
+      "objectives": ["写出一个可以观察或检查的学习目标"],
+      "prerequisites": [],
+      "misconceptions": ["写出一个真实常见错误"]
+    }
+  ],
+  "units": [
+    {
+      "id": "REPLACE-UNIT-ID",
+      "order": 1,
+      "title": { "zh": "单元名称", "en": "Unit title" },
+      "lessons": [
+        {
+          "id": "REPLACE-LESSON-ID",
+          "order": 1,
+          "title": { "zh": "课次名称", "en": "Lesson title" },
+          "description": { "zh": "用一句话说明本课内容。", "en": "Describe the lesson in one sentence." },
+          "learningGoal": { "zh": "我能……", "en": "I can..." },
+          "demo": {
+            "durationMinutes": 2,
+            "concept": { "zh": "用一句话讲清本课最重要的方法。", "en": "Explain the most important method in one sentence." },
+            "steps": [
+              { "zh": "第一步应该观察什么。", "en": "What to notice first." },
+              { "zh": "第二步应该怎样处理。", "en": "What to do next." }
+            ],
+            "example": {
+              "prompt": { "zh": "写一个与练习题不同的完整例题。", "en": "Write a complete example different from practice items." },
+              "steps": [
+                { "zh": "展示第一步。", "en": "Show the first step." },
+                { "zh": "展示第二步。", "en": "Show the second step." }
+              ],
+              "answer": { "zh": "明确写出例题答案。", "en": "State the example answer clearly." }
+            },
+            "takeaway": { "zh": "用一句简短口诀或规则收尾。", "en": "End with one short rule." },
+            "commonMistake": { "zh": "说明最容易出现的错误以及如何避免。", "en": "Explain the most likely mistake and how to avoid it." }
+          },
+          "legacyAliases": [],
+          "knowledgeIds": ["REPLACE-KNOWLEDGE-ID"],
+          "prerequisiteKnowledgeIds": [],
+          "commonMistakes": ["写出学习者最可能出现的错误"],
+          "hints": [
+            { "level": 1, "kind": "direction", "text": { "zh": "只指出思考方向。", "en": "Point to a direction only." } },
+            { "level": 2, "kind": "steps", "text": { "zh": "拆成步骤，但不直接给答案。", "en": "Break it into steps without giving the answer." } },
+            { "level": 3, "kind": "example", "text": { "zh": "给一个不同数字或情境的相似例子。", "en": "Give a similar example with different values or context." } }
+          ],
+          "reviewPolicy": { "masteryThreshold": 80, "intervalDays": [1, 3, 7, 14, 30, 60, 120] },
+          "reviewStage": "draft",
+          "items": [
+            {
+              "id": "REPLACE-ITEM-ID",
+              "type": "single_choice",
+              "question": { "zh": "示例题干", "en": "Example question" },
+              "assessmentRole": "recognition",
+              "variantGroup": "REPLACE-VARIANT-GROUP",
+              "options": ["正确选项", "干扰项"],
+              "answer": 0,
+              "difficulty": 1,
+              "explanation": { "zh": "解释为什么答案正确。", "en": "Explain why the answer is correct." },
+              "knowledgeId": "REPLACE-KNOWLEDGE-ID",
+              "source": {
+                "providerItemId": "REPLACE-PROVIDER-ITEM-ID",
+                "origin": "original",
+                "licenseId": "got-it-original-v1"
+              },
+              "review": {
+                "status": "draft",
+                "structureChecked": false,
+                "answerChecked": false,
+                "contentReviewed": false,
+                "reviewer": ""
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,485 @@
+{
+  "description": "Original application files, excluding macOS metadata. Paths are relative to web/.",
+  "files": [
+    {
+      "path": "assets/experimental/forest-temple-level.png",
+      "sha256": "3f5f0b91135a27c1ef705730320568570dc0aa081d8e68abf5dc8bfbbb48cdea",
+      "bytes": 2220971
+    },
+    {
+      "path": "assets/experimental/stick-fighter-poster.png",
+      "sha256": "9e0e0a814c5cebf2ea81a2e7cab27103fdf89ee896e639217969f1af428c1ea9",
+      "bytes": 2270812
+    },
+    {
+      "path": "assets/fonts/noto-serif-sc-700.woff2",
+      "sha256": "7535a804cc83aa0e8f40fdb1170556ad54ea3260e087a368f3ad6ab4bc86ca4f",
+      "bytes": 1557548
+    },
+    {
+      "path": "assets/fonts/OFL-Noto-Serif-SC.txt",
+      "sha256": "18aabf190848725e2576eefb5c29ba06aac1029d02132252a7f312eac2e50cf3",
+      "bytes": 4314
+    },
+    {
+      "path": "assets/nameless-academy-logo.png",
+      "sha256": "0d4a93928c1f31c1d633c0f5d892a7164cf3651491ac4e63c457628444e6a787",
+      "bytes": 29157
+    },
+    {
+      "path": "assets/stick-controls/attack.png",
+      "sha256": "139d0a7b48993b7d7c41e686f3df4b43e5131ae09418614daf07f59bf020bedd",
+      "bytes": 72754
+    },
+    {
+      "path": "assets/stick-controls/block.png",
+      "sha256": "68357e31d80efa983b010fa5e494a862f953b5e10a2c7965d2508ed95e8d9cb9",
+      "bytes": 76287
+    },
+    {
+      "path": "assets/stick-controls/kick.png",
+      "sha256": "fe12fd14f36b37274a6b1a74a3e8b06793cb2042528b20374e4bf0fca10c29cf",
+      "bytes": 77407
+    },
+    {
+      "path": "assets/titles/all-rounder.jpg",
+      "sha256": "7e590f2fee1f9b4e42ef6fe246285a03cb666202e9767417557ceddda3713873",
+      "bytes": 350636
+    },
+    {
+      "path": "assets/titles/bronze-apprentice.jpg",
+      "sha256": "cff1556c2b2a5128f1b55ebe85e22064186c3f714ac706b36926fb206951a3ce",
+      "bytes": 161662
+    },
+    {
+      "path": "assets/titles/english-master.jpg",
+      "sha256": "4a084485049b029a7fed6c43d538deab196b17e07437ecb7efecf5a9473c6937",
+      "bytes": 304990
+    },
+    {
+      "path": "assets/titles/first-step.jpg",
+      "sha256": "c584a0f917ab65dc736fd379b7f5f5d1a9a5a06a91999fabf85fa2adb109092e",
+      "bytes": 222305
+    },
+    {
+      "path": "assets/titles/golden-scholar.jpg",
+      "sha256": "70e30f012e47e6c2e7f7bdf9f13d31e8d3f510c8fa6f04b3365431c75d92f7c2",
+      "bytes": 271222
+    },
+    {
+      "path": "assets/titles/math-master.jpg",
+      "sha256": "326261796b31791542f1e08e328b712bae41254b3b382df3b925e8a6d789122a",
+      "bytes": 375937
+    },
+    {
+      "path": "assets/titles/peerless.jpg",
+      "sha256": "53808285537cd828f9614531d5bca3836b0b902b2a88a0e25ad28dd1f5ab8cb2",
+      "bytes": 189792
+    },
+    {
+      "path": "assets/titles/perfect.jpg",
+      "sha256": "df6bf9581d879dff973e0a88564851ddcd8ccb7ae678e92790d50ecfefc18885",
+      "bytes": 219748
+    },
+    {
+      "path": "assets/titles/precision.jpg",
+      "sha256": "6e0c91f54f1c9da3f23f2dbd9340429989e2553d25993494266c3ee40f723cac",
+      "bytes": 189468
+    },
+    {
+      "path": "assets/titles/science-master.jpg",
+      "sha256": "2e0545559b2e5819ca4dbe5a90c72a24a69c6c625ede064927cfaa9a91be1850",
+      "bytes": 284391
+    },
+    {
+      "path": "assets/titles/silver-explorer.jpg",
+      "sha256": "6f0c1e9cb136c8db8ea06eaea3c9e9384724055529114285d3c8b110794758e9",
+      "bytes": 188073
+    },
+    {
+      "path": "assets/titles/steady.jpg",
+      "sha256": "4b8571083d02143db0cafc082d03373859de070e5a2d40e5ea2e1bb7dbea0627",
+      "bytes": 219418
+    },
+    {
+      "path": "assets/titles/streak-3.jpg",
+      "sha256": "604f85185dfd134a5e0cca598e6032073da711ad9065b5247da0653548da8ca6",
+      "bytes": 119462
+    },
+    {
+      "path": "assets/titles/streak-30.jpg",
+      "sha256": "b3d854b6990860b82902b6ac4c74b5f7e3dfabfc6bc0256fb1e1248d552ee575",
+      "bytes": 272721
+    },
+    {
+      "path": "assets/titles/streak-7.jpg",
+      "sha256": "87ff6cca7010d4084e468f626fbb5dcdd45ea858976099ce7883f87d4f7168b3",
+      "bytes": 254134
+    },
+    {
+      "path": "data/curriculum/catalog.v3.json",
+      "sha256": "df521da7d0a4f3108e5c6d0652e45e967e6fafc0552489eca616c53005aa70a7",
+      "bytes": 15658
+    },
+    {
+      "path": "data/curriculum/packages/cn-2022-math-g1-pilot/g1-first-number-foundation.json",
+      "sha256": "c9b4cf641956630344a5dacb2535db213b12a4429994ffd1cd564c7822686d4a",
+      "bytes": 65807
+    },
+    {
+      "path": "data/curriculum/packages/cn-2022-math-g1-pilot/package.json",
+      "sha256": "5f11d545b9812c52be8b9cf8dd12abfe95bbcb55811f76a9d490193b9ea39261",
+      "bytes": 1434
+    },
+    {
+      "path": "data/english.json",
+      "sha256": "e3cec488c3ab8c21847b3d5ed9a0d89c0e4324144c55183abe258d41ebb554a4",
+      "bytes": 2738555
+    },
+    {
+      "path": "data/math.json",
+      "sha256": "43592642eb9c84071fd5e16a4f7ee25913f0e924b1289384c92894b390ddef96",
+      "bytes": 387956
+    },
+    {
+      "path": "data/reference/curriculum-templates/lesson-shard.template.json",
+      "sha256": "9cc6bc4718d96f82dd934a0de6c2816470f9d12c157307f144fa15f23f24a03d",
+      "bytes": 3942
+    },
+    {
+      "path": "data/reference/curriculum-templates/package.template.json",
+      "sha256": "0cc1aba45730720e0031ea7a3c8f4d0299aa83c6499e7d6a6f777a4e64ac092f",
+      "bytes": 1065
+    },
+    {
+      "path": "data/reference/curriculum-templates/README.md",
+      "sha256": "05021ab2ff6a956a3d408bdec04eebc41f670b8e65e3d70678d56b6e6a2e7909",
+      "bytes": 700
+    },
+    {
+      "path": "data/reference/legacy-hard/hard-english.json",
+      "sha256": "f55a6f2638ec37d6c45cdaed801c0156efc1444f0eda1fc59625a60f001ea703",
+      "bytes": 1389728
+    },
+    {
+      "path": "data/reference/legacy-hard/hard-math.json",
+      "sha256": "c686c6c69c3fd40736ac3f304caa111526bed5543708d260e8ed9316d43111f5",
+      "bytes": 215089
+    },
+    {
+      "path": "data/reference/legacy-hard/hard-science.json",
+      "sha256": "ec82aa72e92b1b5817e87d18c829d4f42d029de9a5f54f5c272ba7cca5a3b51c",
+      "bytes": 783823
+    },
+    {
+      "path": "data/reference/math-extension.json",
+      "sha256": "3fbedd878a173c935fc09040fa9c614d42f9b2ea31710ff1d0aeb4904ffc0d14",
+      "bytes": 47818
+    },
+    {
+      "path": "data/reference/vocabulary-extension.json",
+      "sha256": "1ece0cae7f45fdf096a94d178db373db604bc43f6147e905dd83f5fa5cd6e537",
+      "bytes": 22491
+    },
+    {
+      "path": "data/schema/course-package.schema.json",
+      "sha256": "cd0230eb51eff4cb88552e0bca9b1b6f8e10d72a65fbb0ffbebe53b9d3d64fc6",
+      "bytes": 3898
+    },
+    {
+      "path": "data/schema/curriculum-catalog-v3.schema.json",
+      "sha256": "2af12f2e05cae6069a6302354bb96140080d0b6faa03aab4c4b46a9a51d4c948",
+      "bytes": 5227
+    },
+    {
+      "path": "data/schema/curriculum-package-v3.schema.json",
+      "sha256": "f2734d06a6d6c4461c61f2c01e1bad4e81175d880166befae48a0e291cdf33ce",
+      "bytes": 3007
+    },
+    {
+      "path": "data/schema/curriculum-shard-v3.schema.json",
+      "sha256": "4d5b0507569cddbac46218423a3fa3feb005e8d8e507dd55a3c6fe8313853a73",
+      "bytes": 7664
+    },
+    {
+      "path": "data/schema/question-bank.schema.json",
+      "sha256": "855f3926369a60702bdbf90d867857fae35a7b4190a6a3590bd82aa4a5ac4575",
+      "bytes": 2837
+    },
+    {
+      "path": "data/science.json",
+      "sha256": "6767a860562b0d7635edd9f06e0f300c68b85826d5735f8fc0ef75bf68260930",
+      "bytes": 1517393
+    },
+    {
+      "path": "favicon.svg",
+      "sha256": "0f704b4510b1ea222d29b8a3d99567aea0d819521530b5bed7eabed7e96e6680",
+      "bytes": 232
+    },
+    {
+      "path": "games.html",
+      "sha256": "ea9d40eb2d8eb4f120f3f5f7f7437c0ab0e54e76f77c3a587ef19b3dca65734b",
+      "bytes": 8925
+    },
+    {
+      "path": "index.html",
+      "sha256": "3c413b43fee8dbb523c355d27559fa47614021d78c7aa55d2677552d1d9ec92e",
+      "bytes": 33513
+    },
+    {
+      "path": "manifest.webmanifest",
+      "sha256": "6558b04012424be7b3af92d71823bcb674ecbe321762355dcf64a0e4d259ecb9",
+      "bytes": 516
+    },
+    {
+      "path": "service-worker.js",
+      "sha256": "ceb35792dd39fa8d060ae75533a0d382fa3ddf7017d5116938689092257b3f57",
+      "bytes": 3964
+    },
+    {
+      "path": "src/app/account.js",
+      "sha256": "79c8d0c8beeafa7ab28b07effa6dad3efd5a3776220a92e965b1e79a7fb4f3b9",
+      "bytes": 12457
+    },
+    {
+      "path": "src/app/admin.js",
+      "sha256": "27b35af6ff1eb1020e1678641d636f12628e04d07cc48edee39f1733a916aaa7",
+      "bytes": 11447
+    },
+    {
+      "path": "src/app/bank-loader.js",
+      "sha256": "74e115ff24b485bac5b08b2149afe3ece1e745680f775d421040588c886d0286",
+      "bytes": 3004
+    },
+    {
+      "path": "src/app/bootstrap.js",
+      "sha256": "fbeec933a660b12b021abf428a99a09f8d1fb474e6b167739e4d1417d6118842",
+      "bytes": 3127
+    },
+    {
+      "path": "src/app/curriculum-v3.js",
+      "sha256": "7fbbd366822aca7732d6f259c3a3c7c461c67ccd826ab74406910b159645034e",
+      "bytes": 17816
+    },
+    {
+      "path": "src/app/exchange.js",
+      "sha256": "af569b06a48113f24005ab80fbf4f6f1ebdd6a14cabb4b3ddf433a6f3067de70",
+      "bytes": 10320
+    },
+    {
+      "path": "src/app/guardian.js",
+      "sha256": "f1fe82d7a40810e6c5953719eda26ebe93b53fe98133f9c6b485279d953be3c4",
+      "bytes": 10027
+    },
+    {
+      "path": "src/app/learning-platform.js",
+      "sha256": "f6d77d02c95594c3fd3f7856bd9b46bbe5832bfdc1b263a82265941a0a7c5e03",
+      "bytes": 62944
+    },
+    {
+      "path": "src/app/product-suite.js",
+      "sha256": "bb59b80bf9c18a3f9da66e62aa4ce49ce5107ff1babb4afc075b2b284239c117",
+      "bytes": 49997
+    },
+    {
+      "path": "src/app/quiz-navigation.js",
+      "sha256": "dc1b5e24d45ef1d091dd9580b199fe83da3951ff85a86f37915e28ce1b4ac008",
+      "bytes": 711
+    },
+    {
+      "path": "src/app/state.js",
+      "sha256": "ff15e369565ab39850e0535363b8a42889721d11e657c4ec1d35a464a3c76aeb",
+      "bytes": 10951
+    },
+    {
+      "path": "src/app/tactile-v8.js",
+      "sha256": "5d3fc0360ac9f2bccd8aad78bcb762e5e40ce3dbb7e5eb39d9d78618317b5a81",
+      "bytes": 13678
+    },
+    {
+      "path": "src/app/usage.js",
+      "sha256": "70c5353e28b766f7295eda927c58eace3cbe9ac16557ac4cd25f7390ef656071",
+      "bytes": 5133
+    },
+    {
+      "path": "src/config/content.js",
+      "sha256": "057e5fb17bac02f25ce6873865687191ee693b4c007e9559a483e17b0c4a604e",
+      "bytes": 894
+    },
+    {
+      "path": "src/config/learning-ai.js",
+      "sha256": "5aeeda60c3fdcfbb89db724a725575b47332cc30b852b10b42d57b46a5bdb38d",
+      "bytes": 410
+    },
+    {
+      "path": "src/config/remote.js",
+      "sha256": "b3c15ab1091a504dfbe1cc3358d1c51fc895fb5099ca669ffe8cba38e3adb30f",
+      "bytes": 571
+    },
+    {
+      "path": "src/games/access-gate.js",
+      "sha256": "a601827e03197df77e495af17ae713d2b36328f1d03d92bb636ba9a89fab2bab",
+      "bytes": 4569
+    },
+    {
+      "path": "src/games/battleship.js",
+      "sha256": "75a85bd14ccc96de2c2c3c18f5b3da3f36edf03baa4e556b4813484a002207c3",
+      "bytes": 13533
+    },
+    {
+      "path": "src/games/blocks.js",
+      "sha256": "84cbf1a838466d51bd1c91c9a1286a9faa44987b9e22c368e47ef7b2246de62f",
+      "bytes": 11114
+    },
+    {
+      "path": "src/games/breakout.js",
+      "sha256": "6e638fdaa68f7a8e962fcbcf07718a7529b8af62d4bee6cca2b5ed297e7175d1",
+      "bytes": 8490
+    },
+    {
+      "path": "src/games/chess.js",
+      "sha256": "372fd334fb6bdb5f5b400f0988245b0713f389d3fbcae1d3c2802d980a5b989f",
+      "bytes": 16269
+    },
+    {
+      "path": "src/games/core.js",
+      "sha256": "d9f13d93857ab0b2a4ba1987279dfe41ad10ecd2fc94e292bca612f5dd9f4e56",
+      "bytes": 28363
+    },
+    {
+      "path": "src/games/experimental/forest-twins.js",
+      "sha256": "ad32ce44812d6086c680dee4bbe4a959c201a95ac0c143ee339008da40aabbee",
+      "bytes": 8579
+    },
+    {
+      "path": "src/games/experimental/iron-snout.js",
+      "sha256": "04eb766909bfb561ea69105aa3dd060a0e2baa08db88bcbb7e39cfad2adeff78",
+      "bytes": 10710
+    },
+    {
+      "path": "src/games/gomoku.js",
+      "sha256": "d93b004c9ce1376c0e0d3ed2a1f3f467fda4a4dcefec59f51603049b2e5f69de",
+      "bytes": 10430
+    },
+    {
+      "path": "src/games/invaders.js",
+      "sha256": "23cf563b809270022414ca4327f8a0a23319c9dc9f3bacd53412a60f5841e257",
+      "bytes": 9838
+    },
+    {
+      "path": "src/games/lifecycle.js",
+      "sha256": "456a8f70cc5c80ca6847ad1c0970a314c50e4b2d76d64974b3403e1aa737000b",
+      "bytes": 534
+    },
+    {
+      "path": "src/games/online.js",
+      "sha256": "af49eedf1a25a3db0563a3e41f0c29844bb2547c2139997e5b5cdb4895f0ed91",
+      "bytes": 792
+    },
+    {
+      "path": "src/games/pacman.js",
+      "sha256": "c7e630338fbf9c028818dc1298389efa739af8a1318b8c3b5cf8d27545a16479",
+      "bytes": 9489
+    },
+    {
+      "path": "src/games/reaction.js",
+      "sha256": "31f62ba30bdbba794dbc4acf57b56552697bd9126b2dad9911c7cb5652096af3",
+      "bytes": 3392
+    },
+    {
+      "path": "src/games/rhythm.js",
+      "sha256": "a481a370a55db39be0381d706e7ae77f2b3cddd3dea8044974ff4d78e2c3dfb9",
+      "bytes": 1473
+    },
+    {
+      "path": "src/games/snake.js",
+      "sha256": "3a3e0b12e763ea63471395509a22c8d70bf55e98ac640719f362d2d3f44a0566",
+      "bytes": 6308
+    },
+    {
+      "path": "src/games/stick.js",
+      "sha256": "bbd0aa4a88112502d3d21bd130cac772c2958419f771083a22c835148b481521",
+      "bytes": 126930
+    },
+    {
+      "path": "src/generated/curriculum-content.js",
+      "sha256": "e2088e83d7ee4a65e046452b6e1fd1cf13e7f09df717a099214e7e6cd6b9c205",
+      "bytes": 74101
+    },
+    {
+      "path": "src/generated/question-banks.js",
+      "sha256": "e8f26914569cbc3f0a9cb7a32ff93afe05594003832595a53437e2c8836bdd9d",
+      "bytes": 2980124
+    },
+    {
+      "path": "src/shared/curriculum-contract-v3.js",
+      "sha256": "041d1d9d146643e6b412e8d6ffdb5ebc8934575e6776096d81c9e1a92214c3eb",
+      "bytes": 18121
+    },
+    {
+      "path": "src/shared/knowledge-lesson-library-v1.js",
+      "sha256": "2a3302500273425b485f821323bb4772e51511445b6ce18483340ce268feffe7",
+      "bytes": 24537
+    },
+    {
+      "path": "src/shared/knowledge-lessons-math-v1.js",
+      "sha256": "20318d2cc20cb879871ae3e9f37bd004beded9a6731f589d1363c5eb22b77c3c",
+      "bytes": 41453
+    },
+    {
+      "path": "src/shared/knowledge-visuals-v1.js",
+      "sha256": "53c0fb788ed34fbabf7edae6914ad04cdc5c6c2ea5f444fe48665ab79bb471e3",
+      "bytes": 5961
+    },
+    {
+      "path": "src/shared/lesson-demo-v3.js",
+      "sha256": "a7574c5d059fcde3eb7302510c1bf87803d139ece7504ed434c850fdda76020b",
+      "bytes": 4676
+    },
+    {
+      "path": "src/shared/practice-selector-v3.js",
+      "sha256": "c920099ed10d0e56781113451f70158ad33dba003440e342ec8d2f464fd8f2b7",
+      "bytes": 3678
+    },
+    {
+      "path": "src/shared/remote-client.js",
+      "sha256": "462ee1ae7e229adb0cd9d79bb067906f9e21ade303d9979ffffe1e5f322bde8b",
+      "bytes": 2238
+    },
+    {
+      "path": "styles/games.css",
+      "sha256": "33dee3f56eed3b624f20813cd095bd7cc21f3492a7cabd2a5a0725ff72a10d08",
+      "bytes": 22387
+    },
+    {
+      "path": "styles/icon-controls-v9.css",
+      "sha256": "38b9daad9368c510ef825f1cec5ac6d8bba1f07b11b879b30a97a33b4d353c70",
+      "bytes": 1429
+    },
+    {
+      "path": "styles/index.css",
+      "sha256": "89098b3da5447162822a06b11dbe88c32c2e2c88e329d50f10c2fe452c0a10d2",
+      "bytes": 34888
+    },
+    {
+      "path": "styles/learning-v2.css",
+      "sha256": "7fb17bf248d8aff91533b7e93728034d7897487c06a2baa173d6affef58b3b43",
+      "bytes": 109676
+    },
+    {
+      "path": "styles/shell-v11.css",
+      "sha256": "4872c2b1832dd215629c8c138b6f60312149891683bb784754ef300df7196251",
+      "bytes": 4379
+    },
+    {
+      "path": "styles/tactile-v8.css",
+      "sha256": "fbd1b5f327627babd37d4663fad14c6a40a39de04702cc417ab335fa7a218f44",
+      "bytes": 7565
+    },
+    {
+      "path": "styles/touch-controls.css",
+      "sha256": "72d67b010efbd5c278c273c3a1e481e282f20644169b7e5f79f85c5c016e7ce8",
+      "bytes": 9334
+    }
+  ]
+}

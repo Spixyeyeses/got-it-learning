@@ -1,0 +1,142 @@
+/* Open shell: no fake device frame, while content remains strongly modular. */
+:root {
+  --shell-bg: #08110e;
+  --shell-header: rgba(9,18,15,.91);
+  --shell-card: #101c18;
+  --shell-card-high: #13221d;
+  --shell-edge: rgba(218,235,226,.11);
+  --shell-shadow: 0 18px 46px rgba(0,0,0,.22);
+}
+
+body {
+  padding: 0;
+  background:
+    radial-gradient(950px 560px at 8% -8%, rgba(64,125,101,.18), transparent 66%),
+    radial-gradient(820px 480px at 100% 8%, rgba(129,76,62,.12), transparent 68%),
+    linear-gradient(180deg, #09130f 0, var(--shell-bg) 38%, #07100d 100%);
+}
+
+body::before {
+  opacity: .09;
+  background-image: linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px);
+  background-size: 100% 34px;
+  mask-image: linear-gradient(to bottom, #000, transparent 72%);
+}
+
+.app.app-v2 {
+  width: min(100%, 1500px);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 34px 64px;
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.v2-header {
+  position: sticky;
+  z-index: 42;
+  top: 0;
+  min-height: 66px;
+  margin: 0 -34px 28px;
+  padding: 9px 34px;
+  border: 0;
+  border-bottom: 1px solid var(--shell-edge);
+  border-radius: 0;
+  background: linear-gradient(180deg, rgba(15,27,22,.96), var(--shell-header));
+  box-shadow: 0 12px 32px rgba(0,0,0,.16), inset 0 1px rgba(255,255,255,.025);
+  backdrop-filter: blur(18px) saturate(1.08);
+}
+
+.brand-button {
+  gap: 0;
+  min-width: auto;
+  padding: 4px 0;
+}
+.brand-copy { position: relative; display: grid; gap: 1px; padding-left: 14px; }
+.brand-copy::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  left: 0;
+  width: 3px;
+  border-radius: 4px;
+  background: linear-gradient(180deg, var(--mint), rgba(143,213,183,.22));
+  box-shadow: 0 0 12px rgba(143,213,183,.18);
+}
+.brand-copy strong { font-family: inherit; font-size: 1rem; font-weight: 800; letter-spacing: .02em; }
+.brand-copy small { color: #71837a; font-size: .58rem; font-weight: 700; letter-spacing: .08em; }
+.crumb { margin-left: 14px; padding-left: 14px; border-left: 1px solid var(--shell-edge); }
+
+.data-board-v4 {
+  padding: 0;
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+.home-v2.has-equipped-title-v7 .data-board-v4 {
+  border: 0;
+  box-shadow: none;
+}
+.home-v2.has-equipped-title-v7 .data-board-v4::before { display: none; }
+.data-board-head-v4 {
+  margin-bottom: 14px;
+  padding: 10px 2px 18px;
+  border-bottom-color: var(--shell-edge);
+}
+.home-v2.has-equipped-title-v7 .data-board-head-v4 { border-bottom-color: var(--shell-edge); }
+
+.data-kpis-v4 {
+  border-color: var(--shell-edge);
+  background: var(--shell-edge);
+  box-shadow: 0 14px 34px rgba(0,0,0,.14), inset 0 1px rgba(255,255,255,.025);
+}
+.data-kpis-v4 article { background: linear-gradient(180deg, rgba(255,255,255,.018), transparent), var(--shell-card); }
+
+.data-panel-v4 {
+  border-color: var(--shell-edge);
+  background: linear-gradient(155deg, rgba(255,255,255,.02), transparent 42%), var(--shell-card);
+  box-shadow: 0 14px 34px rgba(0,0,0,.13), inset 0 1px rgba(255,255,255,.025);
+}
+.next-action-panel-v4 {
+  border-color: rgba(238,126,105,.2);
+  background: linear-gradient(145deg, rgba(238,126,105,.055), transparent 42%), var(--shell-card-high);
+}
+
+.subjects-v2 .subject,
+.curriculum-registry-v3,
+.home-extras-v2 .game-entry,
+.home-extras-v2 .achievement-entry,
+.level-panel,
+.lesson-browser,
+.lesson-preview {
+  box-shadow: 0 15px 38px rgba(0,0,0,.14), inset 0 1px rgba(255,255,255,.025);
+}
+.subjects-v2 .subject { background: linear-gradient(155deg, rgba(255,255,255,.022), transparent 45%), var(--shell-card); }
+.subjects-v2 .subject:hover { background: linear-gradient(155deg, rgba(143,213,183,.045), transparent 46%), var(--shell-card-high); }
+
+.course-library { padding-inline: 0; }
+.home-extras-v2 { margin-inline: 0; }
+
+.course-view,
+.practice-view { padding-inline: 0; }
+.course-view-head { padding-inline: 2px; }
+
+@media (max-width: 780px) {
+  .app.app-v2 { min-height: 100vh; padding: 0 14px 92px; border-radius: 0; }
+  .v2-header { margin: 0 -14px 18px; padding: 8px 14px; }
+  .data-board-v4 { padding: 0; }
+  .data-board-head-v4 { padding-inline: 1px; }
+  .brand-copy { padding-left: 11px; }
+  .crumb { display: none; }
+}
+
+@media (max-width: 480px) {
+  .brand-copy small { display: none; }
+  .v2-header { min-height: 58px; }
+}

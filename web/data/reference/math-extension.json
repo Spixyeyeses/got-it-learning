@@ -1,0 +1,1322 @@
+{
+  "subject": "math",
+  "bankType": "extension",
+  "grades": [
+    {
+      "grade": 5,
+      "units": [
+        {
+          "id": "g5-fractions",
+          "title": "Fraction Workshop",
+          "kicker": "Unit 1 · Number sense",
+          "description": "Add, subtract, multiply, and interpret fractions.",
+          "minutes": 18,
+          "questions": [
+            {
+              "id": "5f-s1",
+              "kind": "short",
+              "prompt": "3/8 + 2/8 = ?",
+              "answer": "5/8",
+              "explanation": "The denominators match, so add the numerators."
+            },
+            {
+              "id": "5f-s2",
+              "kind": "short",
+              "prompt": "7/10 − 3/10 = ?",
+              "answer": "2/5",
+              "explanation": "4/10 simplifies to 2/5."
+            },
+            {
+              "id": "5f-s3",
+              "kind": "short",
+              "prompt": "2 × 3/4 = ?",
+              "answer": "3/2",
+              "explanation": "Two groups of 3/4 make 6/4, or 3/2."
+            },
+            {
+              "id": "5f-s4",
+              "kind": "short",
+              "prompt": "Write 1 3/5 as an improper fraction.",
+              "answer": "8/5",
+              "explanation": "One whole is 5/5; add 3/5."
+            },
+            {
+              "id": "5f-s5",
+              "kind": "short",
+              "prompt": "Which is greater: 5/6 or 4/5?",
+              "answer": "5/6",
+              "explanation": "Cross products are 25 and 24, so 5/6 is greater."
+            },
+            {
+              "id": "5f-w1",
+              "kind": "word",
+              "prompt": "A trail is 3/4 mile. Lena walks it twice. How far?",
+              "answer": "3/2",
+              "explanation": "Multiply 3/4 by 2."
+            },
+            {
+              "id": "5f-w2",
+              "kind": "word",
+              "prompt": "A recipe uses 2/3 cup oats and 1/6 cup seeds. Total?",
+              "answer": "5/6",
+              "explanation": "Convert 2/3 to 4/6, then add."
+            },
+            {
+              "id": "5f-w3",
+              "kind": "word",
+              "prompt": "Noah drank 3/8 L from a 7/8 L bottle. How much remains?",
+              "answer": "1/2",
+              "explanation": "7/8 − 3/8 = 4/8 = 1/2."
+            },
+            {
+              "id": "5f-w4",
+              "kind": "word",
+              "prompt": "Four friends share 3 pizzas equally. How much each?",
+              "answer": "3/4",
+              "explanation": "Divide 3 by 4."
+            },
+            {
+              "id": "5f-w5",
+              "kind": "word",
+              "prompt": "A ribbon 2 1/2 m long is cut into five equal pieces. Length of each?",
+              "answer": "1/2",
+              "explanation": "2 1/2 is 5/2; divide by 5."
+            }
+          ]
+        },
+        {
+          "id": "g5-decimals",
+          "title": "Decimal Lab",
+          "kicker": "Unit 2 · Place value",
+          "description": "Calculate with decimals and powers of ten.",
+          "minutes": 16,
+          "questions": [
+            {
+              "id": "5d-s1",
+              "kind": "short",
+              "prompt": "4.7 + 2.35 = ?",
+              "answer": "7.05",
+              "explanation": "Align decimal points before adding."
+            },
+            {
+              "id": "5d-s2",
+              "kind": "short",
+              "prompt": "9.2 − 3.86 = ?",
+              "answer": "5.34",
+              "explanation": "Regroup across the decimal."
+            },
+            {
+              "id": "5d-s3",
+              "kind": "short",
+              "prompt": "0.6 × 8 = ?",
+              "answer": "4.8",
+              "explanation": "Six tenths eight times is 48 tenths."
+            },
+            {
+              "id": "5d-s4",
+              "kind": "short",
+              "prompt": "3.45 × 100 = ?",
+              "answer": "345",
+              "explanation": "Move the decimal two places right."
+            },
+            {
+              "id": "5d-s5",
+              "kind": "short",
+              "prompt": "Round 18.746 to the nearest tenth.",
+              "answer": "18.7",
+              "explanation": "The hundredths digit is 4, so round down."
+            },
+            {
+              "id": "5d-w1",
+              "kind": "word",
+              "prompt": "A notebook costs $3.75 and a pen costs $1.40. Total?",
+              "answer": "5.15",
+              "explanation": "Add the prices."
+            },
+            {
+              "id": "5d-w2",
+              "kind": "word",
+              "prompt": "Five apples weigh 0.24 kg each. Total mass?",
+              "answer": "1.2",
+              "explanation": "Multiply 0.24 by 5."
+            },
+            {
+              "id": "5d-w3",
+              "kind": "word",
+              "prompt": "A 10 m rope loses 2.65 m. How much remains?",
+              "answer": "7.35",
+              "explanation": "Subtract 2.65 from 10."
+            },
+            {
+              "id": "5d-w4",
+              "kind": "word",
+              "prompt": "A runner completes 2.5 km each day for 6 days. Total?",
+              "answer": "15",
+              "explanation": "Multiply 2.5 by 6."
+            },
+            {
+              "id": "5d-w5",
+              "kind": "word",
+              "prompt": "$20 is shared equally among 8 students. How much each?",
+              "answer": "2.5",
+              "explanation": "20 ÷ 8 = 2.5."
+            }
+          ]
+        },
+        {
+          "id": "g5-volume",
+          "title": "Volume & Measurement",
+          "kicker": "Unit 3 · Geometry",
+          "description": "Measure volume and convert within measurement systems.",
+          "minutes": 18,
+          "questions": [
+            {
+              "id": "5v-s1",
+              "kind": "short",
+              "prompt": "Find the volume of a rectangular prism with length 6, width 4, and height 3.",
+              "answer": "72",
+              "explanation": "Volume is length times width times height."
+            },
+            {
+              "id": "5v-s2",
+              "kind": "short",
+              "prompt": "A prism has volume 96 cubic units, length 8, and width 4. Find its height.",
+              "answer": "3",
+              "explanation": "Divide 96 by the base area, 8 times 4."
+            },
+            {
+              "id": "5v-s3",
+              "kind": "short",
+              "prompt": "Convert 3.5 meters to centimeters.",
+              "answer": "350",
+              "explanation": "Each meter is 100 centimeters."
+            },
+            {
+              "id": "5v-s4",
+              "kind": "short",
+              "prompt": "Convert 2.4 liters to milliliters.",
+              "answer": "2400",
+              "explanation": "Each liter is 1,000 milliliters."
+            },
+            {
+              "id": "5v-s5",
+              "kind": "short",
+              "prompt": "A cube has side length 5. What is its volume?",
+              "answer": "125",
+              "explanation": "Multiply 5 by 5 by 5."
+            },
+            {
+              "id": "5v-w1",
+              "kind": "word",
+              "prompt": "A storage box is 10 in long, 6 in wide, and 4 in high. What is its volume?",
+              "answer": "240",
+              "explanation": "Multiply the three dimensions."
+            },
+            {
+              "id": "5v-w2",
+              "kind": "word",
+              "prompt": "A fish tank has a base area of 180 square inches and height 12 inches. Find its volume.",
+              "answer": "2160",
+              "explanation": "Volume equals base area times height."
+            },
+            {
+              "id": "5v-w3",
+              "kind": "word",
+              "prompt": "A 4.2 km trail includes a 650 m loop. How many meters in all?",
+              "answer": "4850",
+              "explanation": "Convert 4.2 km to 4,200 m, then add 650."
+            },
+            {
+              "id": "5v-w4",
+              "kind": "word",
+              "prompt": "A container holds 3 L. It already has 850 mL. How many milliliters more can it hold?",
+              "answer": "2150",
+              "explanation": "Convert 3 L to 3,000 mL and subtract 850."
+            },
+            {
+              "id": "5v-w5",
+              "kind": "word",
+              "prompt": "Two prisms each measure 3 by 4 by 7 units. What is their combined volume?",
+              "answer": "168",
+              "explanation": "One prism is 84 cubic units; double it."
+            }
+          ]
+        },
+        {
+          "id": "g5-coordinate",
+          "title": "Coordinate Pattern Quest",
+          "kicker": "Unit 4 · Graphs & patterns",
+          "description": "Plot points and analyze numerical patterns.",
+          "minutes": 17,
+          "questions": [
+            {
+              "id": "5c-s1",
+              "kind": "short",
+              "prompt": "In the point (4,7), what is the y-coordinate?",
+              "answer": "7",
+              "explanation": "The second number is the y-coordinate."
+            },
+            {
+              "id": "5c-s2",
+              "kind": "short",
+              "prompt": "Which quadrant is used in the grade 5 coordinate plane?",
+              "answer": "first",
+              "explanation": "Grade 5 works with positive x- and y-coordinates."
+            },
+            {
+              "id": "5c-s3",
+              "kind": "short",
+              "prompt": "Continue the pattern: 3, 7, 11, 15, __.",
+              "answer": "19",
+              "explanation": "Add 4 each time."
+            },
+            {
+              "id": "5c-s4",
+              "kind": "short",
+              "prompt": "Rule A starts at 2 and adds 3. What is its fifth term?",
+              "answer": "14",
+              "explanation": "The terms are 2, 5, 8, 11, 14."
+            },
+            {
+              "id": "5c-s5",
+              "kind": "short",
+              "prompt": "A point moves from (2,3) to (2,8). How many units did it move?",
+              "answer": "5",
+              "explanation": "Only y changes, from 3 to 8."
+            },
+            {
+              "id": "5c-w1",
+              "kind": "word",
+              "prompt": "A park map places the fountain at (3,6) and the gate at (3,1). How far apart vertically?",
+              "answer": "5",
+              "explanation": "Subtract the y-coordinates."
+            },
+            {
+              "id": "5c-w2",
+              "kind": "word",
+              "prompt": "Pattern A adds 2 starting at 1. Pattern B adds 4 starting at 1. What is the difference between their sixth terms?",
+              "answer": "10",
+              "explanation": "The sixth terms are 11 and 21."
+            },
+            {
+              "id": "5c-w3",
+              "kind": "word",
+              "prompt": "A robot starts at (1,2), moves 5 right and 3 up. Where does it stop?",
+              "answer": "(6,5)",
+              "explanation": "Add 5 to x and 3 to y."
+            },
+            {
+              "id": "5c-w4",
+              "kind": "word",
+              "prompt": "Seats are numbered 8, 13, 18, 23. What is the 10th number in the pattern?",
+              "answer": "53",
+              "explanation": "Start at 8 and add nine groups of 5."
+            },
+            {
+              "id": "5c-w5",
+              "kind": "word",
+              "prompt": "A rectangle has vertices (1,1), (6,1), (6,4), and (1,4). What is its area?",
+              "answer": "15",
+              "explanation": "Its width is 5 and height is 3."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "grade": 6,
+      "units": [
+        {
+          "id": "g6-ratios",
+          "title": "Ratios in the Wild",
+          "kicker": "Unit 1 · Proportions",
+          "description": "Use ratios, rates, and percentages to compare quantities.",
+          "minutes": 18,
+          "questions": [
+            {
+              "id": "6r-s1",
+              "kind": "short",
+              "prompt": "Simplify the ratio 18:24.",
+              "answer": "3:4",
+              "explanation": "Divide both terms by 6."
+            },
+            {
+              "id": "6r-s2",
+              "kind": "short",
+              "prompt": "If 5 pens cost $10, what is the unit price?",
+              "answer": "2",
+              "explanation": "Divide cost by number of pens."
+            },
+            {
+              "id": "6r-s3",
+              "kind": "short",
+              "prompt": "30 is what percent of 120?",
+              "answer": "25%",
+              "explanation": "30 ÷ 120 = 0.25."
+            },
+            {
+              "id": "6r-s4",
+              "kind": "short",
+              "prompt": "Complete: 4/7 = ?/21",
+              "answer": "12",
+              "explanation": "Multiply numerator and denominator by 3."
+            },
+            {
+              "id": "6r-s5",
+              "kind": "short",
+              "prompt": "Convert 0.65 to a percent.",
+              "answer": "65%",
+              "explanation": "Multiply by 100."
+            },
+            {
+              "id": "6r-w1",
+              "kind": "word",
+              "prompt": "A map scale is 1 cm:8 km. Two towns are 6 cm apart. Actual distance?",
+              "answer": "48",
+              "explanation": "Multiply 6 by 8."
+            },
+            {
+              "id": "6r-w2",
+              "kind": "word",
+              "prompt": "A class has 12 girls and 18 boys. Ratio girls:students in simplest form?",
+              "answer": "2:5",
+              "explanation": "There are 30 students; 12:30 simplifies to 2:5."
+            },
+            {
+              "id": "6r-w3",
+              "kind": "word",
+              "prompt": "A car travels 210 miles in 3.5 hours. Average speed?",
+              "answer": "60",
+              "explanation": "Rate = distance ÷ time."
+            },
+            {
+              "id": "6r-w4",
+              "kind": "word",
+              "prompt": "A $40 jacket is 15% off. Sale price?",
+              "answer": "34",
+              "explanation": "The discount is $6; subtract from $40."
+            },
+            {
+              "id": "6r-w5",
+              "kind": "word",
+              "prompt": "Paint uses 2 parts blue for 3 parts white. For 12 cups white, blue needed?",
+              "answer": "8",
+              "explanation": "Scale 3 to 12 by multiplying by 4."
+            }
+          ]
+        },
+        {
+          "id": "g6-expressions",
+          "title": "Expression Engine",
+          "kicker": "Unit 2 · Algebra",
+          "description": "Translate, evaluate, and reason with expressions.",
+          "minutes": 17,
+          "questions": [
+            {
+              "id": "6e-s1",
+              "kind": "short",
+              "prompt": "Evaluate 4x + 3 when x = 5.",
+              "answer": "23",
+              "explanation": "Substitute 5 for x."
+            },
+            {
+              "id": "6e-s2",
+              "kind": "short",
+              "prompt": "Simplify 7a + 2a.",
+              "answer": "9a",
+              "explanation": "Combine like terms."
+            },
+            {
+              "id": "6e-s3",
+              "kind": "short",
+              "prompt": "Write an expression for 6 less than n.",
+              "answer": "n-6",
+              "explanation": "Start with n and subtract 6."
+            },
+            {
+              "id": "6e-s4",
+              "kind": "short",
+              "prompt": "Evaluate 3² + 2 × 4.",
+              "answer": "17",
+              "explanation": "Exponents first, then multiplication."
+            },
+            {
+              "id": "6e-s5",
+              "kind": "short",
+              "prompt": "Solve x + 14 = 31.",
+              "answer": "17",
+              "explanation": "Subtract 14 from both sides."
+            },
+            {
+              "id": "6e-w1",
+              "kind": "word",
+              "prompt": "A club charges $12 plus $4 per visit. Cost for v visits?",
+              "answer": "12+4v",
+              "explanation": "The fixed fee is 12 and each visit adds 4."
+            },
+            {
+              "id": "6e-w2",
+              "kind": "word",
+              "prompt": "A rectangle has length x + 3 and width 5. Write its area.",
+              "answer": "5(x+3)",
+              "explanation": "Area is length times width."
+            },
+            {
+              "id": "6e-w3",
+              "kind": "word",
+              "prompt": "Sam has twice as many cards as Mia. Together they have 36. How many does Mia have?",
+              "answer": "12",
+              "explanation": "Let Mia be x: x + 2x = 36."
+            },
+            {
+              "id": "6e-w4",
+              "kind": "word",
+              "prompt": "Tickets cost $7 each. You spend $49. How many tickets?",
+              "answer": "7",
+              "explanation": "Solve 7t = 49."
+            },
+            {
+              "id": "6e-w5",
+              "kind": "word",
+              "prompt": "A tank has 80 L and drains 6 L per minute. Amount after m minutes?",
+              "answer": "80-6m",
+              "explanation": "Start at 80 and subtract 6 each minute."
+            }
+          ]
+        },
+        {
+          "id": "g6-number",
+          "title": "Fraction & Integer Lab",
+          "kicker": "Unit 3 · Number system",
+          "description": "Divide fractions and reason with signed numbers.",
+          "minutes": 19,
+          "questions": [
+            {
+              "id": "6n-s1",
+              "kind": "short",
+              "prompt": "3/4 divided by 1/8 = ?",
+              "answer": "6",
+              "explanation": "Multiply 3/4 by the reciprocal 8/1."
+            },
+            {
+              "id": "6n-s2",
+              "kind": "short",
+              "prompt": "5 divided by 2/3 = ?",
+              "answer": "15/2",
+              "explanation": "Multiply 5 by 3/2."
+            },
+            {
+              "id": "6n-s3",
+              "kind": "short",
+              "prompt": "What is the opposite of -14?",
+              "answer": "14",
+              "explanation": "Opposites are the same distance from zero."
+            },
+            {
+              "id": "6n-s4",
+              "kind": "short",
+              "prompt": "Order from least to greatest: -2, 4, -7.",
+              "answer": "-7,-2,4",
+              "explanation": "Farther left on the number line is less."
+            },
+            {
+              "id": "6n-s5",
+              "kind": "short",
+              "prompt": "Find the distance between -5 and 3.",
+              "answer": "8",
+              "explanation": "Distance is the absolute difference."
+            },
+            {
+              "id": "6n-w1",
+              "kind": "word",
+              "prompt": "Three quarters of a yard of ribbon is cut into pieces 1/12 yard long. How many pieces?",
+              "answer": "9",
+              "explanation": "Divide 3/4 by 1/12."
+            },
+            {
+              "id": "6n-w2",
+              "kind": "word",
+              "prompt": "A 6 1/2 lb bag is split equally into 5 smaller bags. Weight of each?",
+              "answer": "13/10",
+              "explanation": "Convert to 13/2 and divide by 5."
+            },
+            {
+              "id": "6n-w3",
+              "kind": "word",
+              "prompt": "The temperature falls from 6 C to -4 C. What is the change?",
+              "answer": "-10",
+              "explanation": "Final minus initial is -4 minus 6."
+            },
+            {
+              "id": "6n-w4",
+              "kind": "word",
+              "prompt": "A diver is at -18 m and rises 7 m. What is the new position?",
+              "answer": "-11",
+              "explanation": "Add 7 to -18."
+            },
+            {
+              "id": "6n-w5",
+              "kind": "word",
+              "prompt": "A recipe needs 2/5 cup oil per batch. How many batches use 3 cups?",
+              "answer": "15/2",
+              "explanation": "Divide 3 by 2/5."
+            }
+          ]
+        },
+        {
+          "id": "g6-data",
+          "title": "Data & Geometry Studio",
+          "kicker": "Unit 4 · Statistics",
+          "description": "Summarize data and solve area and surface-area problems.",
+          "minutes": 20,
+          "questions": [
+            {
+              "id": "6d-s1",
+              "kind": "short",
+              "prompt": "Find the mean of 4, 7, 9, and 12.",
+              "answer": "8",
+              "explanation": "The sum is 32; divide by 4."
+            },
+            {
+              "id": "6d-s2",
+              "kind": "short",
+              "prompt": "Find the median of 2, 5, 8, 10, 13.",
+              "answer": "8",
+              "explanation": "The middle value is 8."
+            },
+            {
+              "id": "6d-s3",
+              "kind": "short",
+              "prompt": "Find the range of 14, 9, 21, 17.",
+              "answer": "12",
+              "explanation": "Maximum 21 minus minimum 9."
+            },
+            {
+              "id": "6d-s4",
+              "kind": "short",
+              "prompt": "Find the area of a triangle with base 12 and height 7.",
+              "answer": "42",
+              "explanation": "Use one-half times base times height."
+            },
+            {
+              "id": "6d-s5",
+              "kind": "short",
+              "prompt": "Find the area of a parallelogram with base 9 and height 5.",
+              "answer": "45",
+              "explanation": "Area is base times perpendicular height."
+            },
+            {
+              "id": "6d-w1",
+              "kind": "word",
+              "prompt": "Five quiz scores are 70, 80, 85, 90, and 95. What is the mean?",
+              "answer": "84",
+              "explanation": "The total is 420; divide by 5."
+            },
+            {
+              "id": "6d-w2",
+              "kind": "word",
+              "prompt": "A triangular garden has base 16 m and height 9 m. What is its area?",
+              "answer": "72",
+              "explanation": "Use one-half times 16 times 9."
+            },
+            {
+              "id": "6d-w3",
+              "kind": "word",
+              "prompt": "A rectangular prism is 2 by 3 by 5. What is its surface area?",
+              "answer": "62",
+              "explanation": "Add twice each pairwise product: 12 + 20 + 30."
+            },
+            {
+              "id": "6d-w4",
+              "kind": "word",
+              "prompt": "Data values are 3, 3, 4, 5, 20. Which measure, mean or median, better represents a typical value?",
+              "answer": "median",
+              "explanation": "The outlier 20 pulls the mean upward."
+            },
+            {
+              "id": "6d-w5",
+              "kind": "word",
+              "prompt": "A room floor is 12 ft by 15 ft. Tiles cover 3 square feet each. How many tiles are needed?",
+              "answer": "60",
+              "explanation": "The area is 180 square feet; divide by 3."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "grade": 7,
+      "units": [
+        {
+          "id": "g7-proportions",
+          "title": "Proportion Studio",
+          "kicker": "Unit 1 · Relationships",
+          "description": "Analyze proportional relationships and percent change.",
+          "minutes": 20,
+          "questions": [
+            {
+              "id": "7p-s1",
+              "kind": "short",
+              "prompt": "Find k if y = kx and y = 18 when x = 6.",
+              "answer": "3",
+              "explanation": "k = y ÷ x."
+            },
+            {
+              "id": "7p-s2",
+              "kind": "short",
+              "prompt": "Is y = 4x + 1 proportional?",
+              "answer": "no",
+              "explanation": "A proportional relationship passes through the origin."
+            },
+            {
+              "id": "7p-s3",
+              "kind": "short",
+              "prompt": "Increase 80 by 25%.",
+              "answer": "100",
+              "explanation": "25% of 80 is 20."
+            },
+            {
+              "id": "7p-s4",
+              "kind": "short",
+              "prompt": "What is the slope through (0,0) and (5,15)?",
+              "answer": "3",
+              "explanation": "Rise over run is 15/5."
+            },
+            {
+              "id": "7p-s5",
+              "kind": "short",
+              "prompt": "Solve x/9 = 14/21.",
+              "answer": "6",
+              "explanation": "14/21 simplifies to 2/3; 2/3 of 9 is 6."
+            },
+            {
+              "id": "7p-w1",
+              "kind": "word",
+              "prompt": "Three concert tickets cost $82.50. What do 8 cost at the same rate?",
+              "answer": "220",
+              "explanation": "The unit rate is $27.50."
+            },
+            {
+              "id": "7p-w2",
+              "kind": "word",
+              "prompt": "A phone drops from $500 to $425. Percent decrease?",
+              "answer": "15%",
+              "explanation": "The decrease is 75; 75/500 = 15%."
+            },
+            {
+              "id": "7p-w3",
+              "kind": "word",
+              "prompt": "A recipe for 4 uses 2.5 cups flour. Flour for 10 people?",
+              "answer": "6.25",
+              "explanation": "Multiply the unit amount 0.625 by 10."
+            },
+            {
+              "id": "7p-w4",
+              "kind": "word",
+              "prompt": "A cyclist rides 42 km in 1.5 h. Distance in 2.75 h?",
+              "answer": "77",
+              "explanation": "The rate is 28 km/h."
+            },
+            {
+              "id": "7p-w5",
+              "kind": "word",
+              "prompt": "Tax is 7.5% on a $64 purchase. Total?",
+              "answer": "68.8",
+              "explanation": "Tax is $4.80."
+            }
+          ]
+        },
+        {
+          "id": "g7-rational",
+          "title": "Rational Number Quest",
+          "kicker": "Unit 2 · Operations",
+          "description": "Operate confidently with positive and negative numbers.",
+          "minutes": 20,
+          "questions": [
+            {
+              "id": "7n-s1",
+              "kind": "short",
+              "prompt": "−8 + 13 = ?",
+              "answer": "5",
+              "explanation": "Move 13 units right from −8."
+            },
+            {
+              "id": "7n-s2",
+              "kind": "short",
+              "prompt": "−6 × −7 = ?",
+              "answer": "42",
+              "explanation": "A negative times a negative is positive."
+            },
+            {
+              "id": "7n-s3",
+              "kind": "short",
+              "prompt": "15 ÷ (−3) = ?",
+              "answer": "-5",
+              "explanation": "A positive divided by a negative is negative."
+            },
+            {
+              "id": "7n-s4",
+              "kind": "short",
+              "prompt": "−2.5 − 4.2 = ?",
+              "answer": "-6.7",
+              "explanation": "Subtracting positive 4.2 moves left."
+            },
+            {
+              "id": "7n-s5",
+              "kind": "short",
+              "prompt": "3/4 + (−5/8) = ?",
+              "answer": "1/8",
+              "explanation": "Convert 3/4 to 6/8."
+            },
+            {
+              "id": "7n-w1",
+              "kind": "word",
+              "prompt": "The temperature is −4°C and rises 11°. New temperature?",
+              "answer": "7",
+              "explanation": "Add 11 to −4."
+            },
+            {
+              "id": "7n-w2",
+              "kind": "word",
+              "prompt": "A diver at −18 m descends 7 m. New depth?",
+              "answer": "-25",
+              "explanation": "Descending adds a negative change."
+            },
+            {
+              "id": "7n-w3",
+              "kind": "word",
+              "prompt": "A bank balance is −$35. A $60 deposit is made. Balance?",
+              "answer": "25",
+              "explanation": "Add 60 to −35."
+            },
+            {
+              "id": "7n-w4",
+              "kind": "word",
+              "prompt": "A team loses 3 yards on each of 5 plays. Total change?",
+              "answer": "-15",
+              "explanation": "Multiply −3 by 5."
+            },
+            {
+              "id": "7n-w5",
+              "kind": "word",
+              "prompt": "An elevator goes from floor 6 to parking level −2. Change in floors?",
+              "answer": "-8",
+              "explanation": "Final minus initial is −2 − 6."
+            }
+          ]
+        },
+        {
+          "id": "g7-equations",
+          "title": "Equation & Inequality Forge",
+          "kicker": "Unit 3 · Algebra",
+          "description": "Solve multi-step equations and model constraints.",
+          "minutes": 21,
+          "questions": [
+            {
+              "id": "7e-s1",
+              "kind": "short",
+              "prompt": "Solve 5x + 8 = 43.",
+              "answer": "7",
+              "explanation": "Subtract 8, then divide by 5."
+            },
+            {
+              "id": "7e-s2",
+              "kind": "short",
+              "prompt": "Solve 3(x - 4) = 21.",
+              "answer": "11",
+              "explanation": "Divide by 3, then add 4."
+            },
+            {
+              "id": "7e-s3",
+              "kind": "short",
+              "prompt": "Solve 4x - 6 = 2x + 10.",
+              "answer": "8",
+              "explanation": "Subtract 2x and add 6."
+            },
+            {
+              "id": "7e-s4",
+              "kind": "short",
+              "prompt": "Solve x/3 + 5 = 9.",
+              "answer": "12",
+              "explanation": "Subtract 5, then multiply by 3."
+            },
+            {
+              "id": "7e-s5",
+              "kind": "short",
+              "prompt": "Solve the inequality 2x + 1 < 11.",
+              "answer": "x<5",
+              "explanation": "Subtract 1 and divide by 2."
+            },
+            {
+              "id": "7e-w1",
+              "kind": "word",
+              "prompt": "A gym charges $18 plus $7 per class. Your bill is $74. How many classes?",
+              "answer": "8",
+              "explanation": "Solve 18 + 7c = 74."
+            },
+            {
+              "id": "7e-w2",
+              "kind": "word",
+              "prompt": "A rectangle has perimeter 50 and width 9. Find its length.",
+              "answer": "16",
+              "explanation": "Solve 2l + 18 = 50."
+            },
+            {
+              "id": "7e-w3",
+              "kind": "word",
+              "prompt": "You have $60 and spend $12 plus $6 per ticket. At most how many tickets can you buy?",
+              "answer": "8",
+              "explanation": "Solve 12 + 6t less than or equal to 60."
+            },
+            {
+              "id": "7e-w4",
+              "kind": "word",
+              "prompt": "The sum of three consecutive integers is 72. What is the middle integer?",
+              "answer": "24",
+              "explanation": "Let the integers be n-1, n, and n+1."
+            },
+            {
+              "id": "7e-w5",
+              "kind": "word",
+              "prompt": "A phone plan costs $25 plus $0.10 per text. The bill must stay under $40. What is the greatest whole number of texts?",
+              "answer": "149",
+              "explanation": "25 + 0.10t must be less than 40, so t is less than 150."
+            }
+          ]
+        },
+        {
+          "id": "g7-circle",
+          "title": "Circles & Chance Lab",
+          "kicker": "Unit 4 · Geometry & probability",
+          "description": "Measure circles and analyze probability and samples.",
+          "minutes": 22,
+          "questions": [
+            {
+              "id": "7c-s1",
+              "kind": "short",
+              "prompt": "Find the circumference of a circle with diameter 10 using pi = 3.14.",
+              "answer": "31.4",
+              "explanation": "Circumference is pi times diameter."
+            },
+            {
+              "id": "7c-s2",
+              "kind": "short",
+              "prompt": "Find the area of a circle with radius 4 in terms of pi.",
+              "answer": "16pi",
+              "explanation": "Area is pi times radius squared."
+            },
+            {
+              "id": "7c-s3",
+              "kind": "short",
+              "prompt": "A fair die is rolled. Probability of rolling an even number?",
+              "answer": "1/2",
+              "explanation": "Three of six outcomes are even."
+            },
+            {
+              "id": "7c-s4",
+              "kind": "short",
+              "prompt": "A bag has 3 red and 7 blue marbles. Probability of red?",
+              "answer": "3/10",
+              "explanation": "There are 3 favorable outcomes out of 10."
+            },
+            {
+              "id": "7c-s5",
+              "kind": "short",
+              "prompt": "In 80 trials an event occurs 28 times. Experimental probability?",
+              "answer": "7/20",
+              "explanation": "28/80 simplifies to 7/20."
+            },
+            {
+              "id": "7c-w1",
+              "kind": "word",
+              "prompt": "A circular garden has radius 6 m. Find its area in terms of pi.",
+              "answer": "36pi",
+              "explanation": "Use pi times 6 squared."
+            },
+            {
+              "id": "7c-w2",
+              "kind": "word",
+              "prompt": "A wheel has diameter 0.8 m. How far does it roll in one turn using pi = 3.14?",
+              "answer": "2.512",
+              "explanation": "One turn covers one circumference."
+            },
+            {
+              "id": "7c-w3",
+              "kind": "word",
+              "prompt": "A spinner has 8 equal sections, 3 green. In 120 spins, about how many green results are expected?",
+              "answer": "45",
+              "explanation": "Multiply 120 by 3/8."
+            },
+            {
+              "id": "7c-w4",
+              "kind": "word",
+              "prompt": "A survey of 50 randomly selected students finds 18 prefer biking. About how many of 600 students would prefer biking?",
+              "answer": "216",
+              "explanation": "Use the sample proportion 18/50."
+            },
+            {
+              "id": "7c-w5",
+              "kind": "word",
+              "prompt": "Two fair coins are tossed. Probability of exactly one head?",
+              "answer": "1/2",
+              "explanation": "HT and TH are two of four equally likely outcomes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "grade": 8,
+      "units": [
+        {
+          "id": "g8-linear",
+          "title": "Linear Systems Lab",
+          "kicker": "Unit 1 · Algebra",
+          "description": "Solve equations and compare linear models.",
+          "minutes": 22,
+          "questions": [
+            {
+              "id": "8l-s1",
+              "kind": "short",
+              "prompt": "Solve 3x − 7 = 20.",
+              "answer": "9",
+              "explanation": "Add 7, then divide by 3."
+            },
+            {
+              "id": "8l-s2",
+              "kind": "short",
+              "prompt": "Find the slope through (2,5) and (6,13).",
+              "answer": "2",
+              "explanation": "(13−5)/(6−2) = 2."
+            },
+            {
+              "id": "8l-s3",
+              "kind": "short",
+              "prompt": "Write y = mx + b with slope −3 and intercept 4.",
+              "answer": "y=-3x+4",
+              "explanation": "Substitute m and b."
+            },
+            {
+              "id": "8l-s4",
+              "kind": "short",
+              "prompt": "Solve 2(x + 5) = 26.",
+              "answer": "8",
+              "explanation": "Divide by 2, then subtract 5."
+            },
+            {
+              "id": "8l-s5",
+              "kind": "short",
+              "prompt": "Solve the system y=x+2 and y=3x−4. Give x.",
+              "answer": "3",
+              "explanation": "Set the expressions equal."
+            },
+            {
+              "id": "8l-w1",
+              "kind": "word",
+              "prompt": "Plan A costs $15 + $8/month; Plan B costs $35 + $4/month. After how many months are costs equal?",
+              "answer": "5",
+              "explanation": "Solve 15 + 8m = 35 + 4m."
+            },
+            {
+              "id": "8l-w2",
+              "kind": "word",
+              "prompt": "A taxi charges $3.50 plus $2.25 per mile. Cost for 12 miles?",
+              "answer": "30.5",
+              "explanation": "3.50 + 2.25(12)."
+            },
+            {
+              "id": "8l-w3",
+              "kind": "word",
+              "prompt": "A tank starts with 120 L and loses 8 L/min. When will 40 L remain?",
+              "answer": "10",
+              "explanation": "Solve 120 − 8m = 40."
+            },
+            {
+              "id": "8l-w4",
+              "kind": "word",
+              "prompt": "Two numbers total 38 and differ by 6. What is the larger number?",
+              "answer": "22",
+              "explanation": "Solve x+y=38 and x−y=6."
+            },
+            {
+              "id": "8l-w5",
+              "kind": "word",
+              "prompt": "A line passes through (0,−2) and (7,12). Write its equation.",
+              "answer": "y=2x-2",
+              "explanation": "Slope is 2 and intercept is −2."
+            }
+          ]
+        },
+        {
+          "id": "g8-geometry",
+          "title": "Geometry in Motion",
+          "kicker": "Unit 2 · Transformations",
+          "description": "Reason with transformations, similarity, and volume.",
+          "minutes": 21,
+          "questions": [
+            {
+              "id": "8g-s1",
+              "kind": "short",
+              "prompt": "Reflect (4,−3) across the x-axis.",
+              "answer": "(4,3)",
+              "explanation": "The x-coordinate stays; y changes sign."
+            },
+            {
+              "id": "8g-s2",
+              "kind": "short",
+              "prompt": "Rotate (2,5) 90° counterclockwise about the origin.",
+              "answer": "(-5,2)",
+              "explanation": "Use (x,y) → (−y,x)."
+            },
+            {
+              "id": "8g-s3",
+              "kind": "short",
+              "prompt": "A triangle dilates by scale factor 3. A side of 4 becomes?",
+              "answer": "12",
+              "explanation": "Multiply by the scale factor."
+            },
+            {
+              "id": "8g-s4",
+              "kind": "short",
+              "prompt": "Find the hypotenuse when legs are 6 and 8.",
+              "answer": "10",
+              "explanation": "6² + 8² = 10²."
+            },
+            {
+              "id": "8g-s5",
+              "kind": "short",
+              "prompt": "Volume of a cylinder with r=3, h=5 in terms of π?",
+              "answer": "45π",
+              "explanation": "V = πr²h."
+            },
+            {
+              "id": "8g-w1",
+              "kind": "word",
+              "prompt": "A 15-ft ladder reaches 12 ft up a wall. How far is its base from the wall?",
+              "answer": "9",
+              "explanation": "Use the Pythagorean theorem."
+            },
+            {
+              "id": "8g-w2",
+              "kind": "word",
+              "prompt": "A model uses scale 1:50. A 4 cm wall represents how many cm?",
+              "answer": "200",
+              "explanation": "Multiply 4 by 50."
+            },
+            {
+              "id": "8g-w3",
+              "kind": "word",
+              "prompt": "A cone has r=3, h=8. Volume in terms of π?",
+              "answer": "24π",
+              "explanation": "V = one-third πr²h."
+            },
+            {
+              "id": "8g-w4",
+              "kind": "word",
+              "prompt": "A square of side 5 is dilated by 1.6. New area?",
+              "answer": "64",
+              "explanation": "New side is 8; area is 64."
+            },
+            {
+              "id": "8g-w5",
+              "kind": "word",
+              "prompt": "Points A(1,2) and B(7,10). What is AB?",
+              "answer": "10",
+              "explanation": "Distance uses √(6²+8²)."
+            }
+          ]
+        },
+        {
+          "id": "g8-functions",
+          "title": "Function Design Lab",
+          "kicker": "Unit 3 · Functions",
+          "description": "Compare functions across equations, tables, and contexts.",
+          "minutes": 22,
+          "questions": [
+            {
+              "id": "8f-s1",
+              "kind": "short",
+              "prompt": "If f(x) = 3x - 2, find f(5).",
+              "answer": "13",
+              "explanation": "Substitute 5 for x."
+            },
+            {
+              "id": "8f-s2",
+              "kind": "short",
+              "prompt": "Is the relation {(1,4),(2,5),(1,7)} a function?",
+              "answer": "no",
+              "explanation": "Input 1 has two different outputs."
+            },
+            {
+              "id": "8f-s3",
+              "kind": "short",
+              "prompt": "A function has values (0,6), (1,10), (2,14). What is its rate of change?",
+              "answer": "4",
+              "explanation": "The output increases by 4 when input increases by 1."
+            },
+            {
+              "id": "8f-s4",
+              "kind": "short",
+              "prompt": "Write a rule for outputs 5, 8, 11, 14 when inputs are 0, 1, 2, 3.",
+              "answer": "y=3x+5",
+              "explanation": "The rate is 3 and initial value is 5."
+            },
+            {
+              "id": "8f-s5",
+              "kind": "short",
+              "prompt": "Which grows faster: y=2x+9 or y=3x-4?",
+              "answer": "y=3x-4",
+              "explanation": "Its slope, 3, is greater than 2."
+            },
+            {
+              "id": "8f-w1",
+              "kind": "word",
+              "prompt": "A candle is 24 cm tall and burns 1.5 cm per hour. Write its height after h hours.",
+              "answer": "24-1.5h",
+              "explanation": "Start at 24 and subtract 1.5 each hour."
+            },
+            {
+              "id": "8f-w2",
+              "kind": "word",
+              "prompt": "A streaming plan costs $8 plus $2 per movie. Find the cost of 7 movies.",
+              "answer": "22",
+              "explanation": "Evaluate 8 + 2(7)."
+            },
+            {
+              "id": "8f-w3",
+              "kind": "word",
+              "prompt": "Machine A makes 45 parts initially and 12 per hour. Machine B makes 21 initially and 16 per hour. When are totals equal?",
+              "answer": "6",
+              "explanation": "Solve 45 + 12h = 21 + 16h."
+            },
+            {
+              "id": "8f-w4",
+              "kind": "word",
+              "prompt": "A line has y-intercept -3 and passes through (4,9). What is its slope?",
+              "answer": "3",
+              "explanation": "Rise from -3 to 9 is 12 over a run of 4."
+            },
+            {
+              "id": "8f-w5",
+              "kind": "word",
+              "prompt": "A tank contains 90 L and drains linearly. After 5 minutes it has 65 L. What is the rate of change?",
+              "answer": "-5",
+              "explanation": "The change is -25 over 5 minutes."
+            }
+          ]
+        },
+        {
+          "id": "g8-exponents",
+          "title": "Exponents & Data Signals",
+          "kicker": "Unit 4 · Number & statistics",
+          "description": "Use scientific notation and interpret bivariate data.",
+          "minutes": 23,
+          "questions": [
+            {
+              "id": "8x-s1",
+              "kind": "short",
+              "prompt": "Simplify 2^3 times 2^4.",
+              "answer": "2^7",
+              "explanation": "Add exponents with the same base."
+            },
+            {
+              "id": "8x-s2",
+              "kind": "short",
+              "prompt": "Write 0.00056 in scientific notation.",
+              "answer": "5.6x10^-4",
+              "explanation": "Move the decimal four places right."
+            },
+            {
+              "id": "8x-s3",
+              "kind": "short",
+              "prompt": "Write 7.2 x 10^5 in standard notation.",
+              "answer": "720000",
+              "explanation": "Move the decimal five places right."
+            },
+            {
+              "id": "8x-s4",
+              "kind": "short",
+              "prompt": "Find the square root of 196.",
+              "answer": "14",
+              "explanation": "Fourteen squared is 196."
+            },
+            {
+              "id": "8x-s5",
+              "kind": "short",
+              "prompt": "A scatter plot rises from left to right. What type of association?",
+              "answer": "positive",
+              "explanation": "As x increases, y tends to increase."
+            },
+            {
+              "id": "8x-w1",
+              "kind": "word",
+              "prompt": "Earth is about 1.5 x 10^8 km from the Sun. Mars is about 2.28 x 10^8 km away. Difference in scientific notation?",
+              "answer": "7.8x10^7",
+              "explanation": "Subtract to get 0.78 x 10^8, then rewrite."
+            },
+            {
+              "id": "8x-w2",
+              "kind": "word",
+              "prompt": "A bacteria count triples each hour from 200. Write the count after h hours.",
+              "answer": "200(3^h)",
+              "explanation": "The initial value is 200 and growth factor is 3."
+            },
+            {
+              "id": "8x-w3",
+              "kind": "word",
+              "prompt": "A square has area 288 square units. What is its side length in simplest radical form?",
+              "answer": "12sqrt2",
+              "explanation": "The square root of 288 is 12 times square root 2."
+            },
+            {
+              "id": "8x-w4",
+              "kind": "word",
+              "prompt": "A two-way table shows 30 of 50 athletes and 20 of 50 non-athletes prefer mornings. Which group has the greater morning preference rate?",
+              "answer": "athletes",
+              "explanation": "The rates are 60% and 40%."
+            },
+            {
+              "id": "8x-w5",
+              "kind": "word",
+              "prompt": "A trend line predicts y=4.5x+12. Predict y when x=20.",
+              "answer": "102",
+              "explanation": "Evaluate 4.5(20) + 12."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "label": "Common Core State Standards",
+      "href": "https://corestandards.org/wp-content/uploads/2023/09/Math_Standards1.pdf",
+      "note": "Grade-level scope and skill progression"
+    },
+    {
+      "label": "Illustrative Mathematics Tasks",
+      "href": "https://tasks.illustrativemathematics.org/",
+      "note": "Open task structures and mathematical practices"
+    },
+    {
+      "label": "Open Up Resources 6–8 Math",
+      "href": "https://access.openupresources.org/curricula/our6-8math-v1/",
+      "note": "CC BY curriculum sequence and lesson contexts"
+    },
+    {
+      "label": "Core Knowledge Language Arts",
+      "href": "https://www.coreknowledge.org/free-resource/ckla-ancillary-materials-fifth-grade/",
+      "note": "Vocabulary and literacy progression"
+    },
+    {
+      "label": "California ELA Language Standards",
+      "href": "https://www2.cde.ca.gov/cacs/id/web/5902",
+      "note": "Context clues, roots, reference skills, and word precision"
+    },
+    {
+      "label": "IM Grade 7 Course Guide",
+      "href": "https://curriculum.illustrativemathematics.org/ms/teachers/2/index.html",
+      "note": "Open unit sequence for algebra, geometry, and probability"
+    }
+  ]
+}

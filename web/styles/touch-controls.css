@@ -1,0 +1,543 @@
+/* Responsive arcade layout and non-overlapping touch consoles. */
+
+html {
+  min-width: 280px;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+button,
+a,
+select {
+  touch-action: manipulation;
+}
+
+.arena-shell,
+.arena-head,
+.stage,
+.arena-foot,
+.dom-game {
+  min-width: 0;
+}
+
+.stage {
+  isolation: isolate;
+}
+
+.stage canvas {
+  object-fit: contain;
+}
+
+.dom-game {
+  overscroll-behavior: contain;
+}
+
+.chess-square,
+.sea-cell,
+.ship-card,
+.reaction-panel {
+  touch-action: manipulation;
+}
+
+.arena-foot {
+  display: grid;
+  grid-template-columns: minmax(140px, 1fr) minmax(0, auto) auto;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: max(8px, env(safe-area-inset-bottom));
+}
+
+.touch-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 0;
+  margin: 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.touch-button-grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(56px, 1fr);
+  gap: 7px;
+}
+
+.touch-btn {
+  min-width: 52px;
+  min-height: 48px;
+  padding: 8px 12px;
+  border-color: #ffffff24;
+  background: linear-gradient(145deg, #29364c, #182131);
+  color: #f8fbff;
+  line-height: 1;
+  box-shadow: inset 0 1px #ffffff14, 0 6px 14px #0005;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.touch-btn.is-pressed,
+.touch-btn:active {
+  border-color: #6be7ff;
+  background: linear-gradient(145deg, #3474a2, #24405f);
+  box-shadow: inset 0 3px 8px #08101d99, 0 0 18px #4fdcff44;
+  transform: translateY(1px) scale(0.97);
+}
+
+.touch-layout-lanes .touch-btn:nth-child(1) {
+  border-bottom-color: #4e8cff;
+}
+
+.touch-layout-lanes .touch-btn:nth-child(2) {
+  border-bottom-color: #9b6cff;
+}
+
+.touch-layout-lanes .touch-btn:nth-child(3) {
+  border-bottom-color: #ff405b;
+}
+
+.touch-layout-lanes .touch-btn:nth-child(4) {
+  border-bottom-color: #2ee9e1;
+}
+
+.touch-layout-blocks .touch-button-grid {
+  grid-auto-columns: minmax(48px, 1fr);
+}
+
+.touch-layout-blocks .touch-btn {
+  min-width: 48px;
+  padding-inline: 9px;
+}
+
+.touch-layout-dpad .touch-button-grid {
+  grid-template: repeat(3, 48px) / repeat(3, 48px);
+  grid-auto-flow: row;
+  grid-auto-columns: auto;
+  gap: 4px;
+}
+
+.touch-layout-dpad .touch-btn {
+  min-width: 48px;
+  min-height: 48px;
+  padding: 0;
+  border-radius: 15px;
+  font-size: 1.3rem;
+}
+
+.touch-layout-dpad [data-slot="up"] {
+  grid-area: 1 / 2;
+}
+
+.touch-layout-dpad [data-slot="left"] {
+  grid-area: 2 / 1;
+}
+
+.touch-layout-dpad [data-slot="right"] {
+  grid-area: 2 / 3;
+}
+
+.touch-layout-dpad [data-slot="down"] {
+  grid-area: 3 / 2;
+}
+
+.touch-layout-direct {
+  justify-content: flex-start;
+}
+
+.touch-direct-hint {
+  padding: 9px 12px;
+  border: 1px solid #2ee9e144;
+  border-radius: 11px;
+  background: #2ee9e10c;
+  color: #aefbf4;
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.touch-layout-fighter {
+  flex: 1;
+}
+
+.touch-group {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.touch-group-title {
+  display: block;
+  margin-bottom: 4px;
+  color: #9fb0c8;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+.touch-layout-fighter .touch-button-grid {
+  width: min(100%, 430px);
+  margin-inline: auto;
+  grid-template: repeat(3, 44px) / repeat(3, 44px) minmax(10px, 1fr) repeat(3, 50px);
+  grid-auto-flow: row;
+  gap: 4px;
+}
+
+.touch-layout-fighter .touch-btn {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
+}
+
+.touch-layout-fighter .fighter-direction {
+  border-radius: 14px;
+  background: linear-gradient(145deg, #26364d, #141d2b);
+  color: #d9e9ff;
+  font-size: 1.15rem;
+}
+
+.touch-layout-fighter [data-slot="up"] {
+  grid-area: 1 / 2;
+}
+
+.touch-layout-fighter [data-slot="left"] {
+  grid-area: 2 / 1;
+}
+
+.touch-layout-fighter [data-slot="down"] {
+  grid-area: 3 / 2;
+}
+
+.touch-layout-fighter [data-slot="right"] {
+  grid-area: 2 / 3;
+}
+
+.touch-layout-fighter .fighter-action {
+  align-self: center;
+  justify-self: center;
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  min-height: 50px;
+  border-width: 2px;
+  border-radius: 50%;
+  font-family: "STKaiti", "KaiTi", "Kaiti SC", "FangSong", cursive;
+  font-size: 1.45rem;
+  font-style: italic;
+  font-weight: 900;
+  text-shadow: 0 2px 6px #000b;
+}
+
+.touch-layout-fighter .fighter-action img {
+  display: block;
+  width: 86%;
+  height: 86%;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 3px #000b);
+  pointer-events: none;
+}
+
+.touch-layout-fighter [data-slot="kick"] {
+  grid-area: 1 / 5;
+  border-color: #ffc85788;
+  background: radial-gradient(circle at 35% 28%, #745521, #342308 72%);
+  color: #fff0a8;
+}
+
+.touch-layout-fighter [data-slot="attack"] {
+  grid-area: 2 / 6;
+  border-color: #ff617d99;
+  background: radial-gradient(circle at 35% 28%, #7b2840, #37101d 72%);
+  color: #ffd7de;
+}
+
+.touch-layout-fighter [data-slot="block"] {
+  grid-area: 3 / 5;
+  border-color: #5ce8ff88;
+  background: radial-gradient(circle at 35% 28%, #215b72, #0b2b3a 72%);
+  color: #d8faff;
+}
+
+.touch-layout-fighter > .mini-btn {
+  align-self: flex-end;
+  min-height: 44px;
+  padding: 7px 10px;
+  white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+  .topbar {
+    gap: 12px;
+  }
+
+  .brand {
+    min-width: 0;
+  }
+
+  .top-actions {
+    gap: 6px;
+  }
+
+  .session-chip {
+    order: 3;
+  }
+
+  .arena-head {
+    gap: 8px;
+  }
+
+  .arena-title {
+    min-width: 0;
+  }
+
+  .arena-title h2 {
+    overflow: hidden;
+    font-size: 1rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .arena-head-actions {
+    flex: 0 0 auto;
+  }
+
+  .hud {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .hud-item {
+    min-width: 0;
+    padding: 6px 7px;
+  }
+
+  .hud-label {
+    font-size: 0.55rem;
+    letter-spacing: 0.04em;
+  }
+
+  .hud-value {
+    overflow: hidden;
+    font-size: 0.82rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .stage {
+    min-height: 120px;
+  }
+
+  .dom-game {
+    min-height: 0;
+  }
+
+  .arena-foot {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: stretch;
+    gap: 7px;
+    max-height: 42dvh;
+    padding: 7px max(7px, env(safe-area-inset-right))
+      max(7px, env(safe-area-inset-bottom)) max(7px, env(safe-area-inset-left));
+    overflow: auto;
+  }
+
+  .arena-foot .help {
+    display: none;
+  }
+
+  .arena-foot > .restart {
+    width: 100%;
+    min-height: 42px;
+    padding: 8px 14px;
+  }
+
+  .touch-controls {
+    width: 100%;
+  }
+
+  .touch-layout-lanes .touch-button-grid {
+    width: 100%;
+    grid-auto-columns: minmax(44px, 1fr);
+  }
+
+  .touch-layout-lanes .touch-btn {
+    min-width: 44px;
+    padding-inline: 4px;
+    font-size: 0.75rem;
+  }
+
+  .touch-layout-direct {
+    justify-content: center;
+  }
+
+  .touch-direct-hint {
+    width: 100%;
+    padding: 7px 10px;
+    text-align: center;
+  }
+
+  .touch-layout-fighter {
+    align-items: flex-end;
+    gap: 5px;
+  }
+
+  .touch-layout-fighter .touch-group {
+    flex: 1 1 100%;
+  }
+
+  .touch-layout-fighter .touch-button-grid {
+    grid-template: repeat(3, 40px) / repeat(3, 40px) minmax(8px, 1fr) repeat(3, 46px);
+  }
+
+  .touch-layout-fighter .fighter-action {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    min-height: 46px;
+  }
+
+  .touch-layout-fighter > .mini-btn {
+    max-width: 78px;
+    overflow: hidden;
+    font-size: 0.68rem;
+    text-overflow: ellipsis;
+  }
+
+  .battle-layout,
+  .placement-layout {
+    width: 100%;
+  }
+
+  .sea-cell,
+  .chess-square {
+    min-width: 0;
+    min-height: 0;
+  }
+}
+
+@media (max-width: 430px) {
+  .shell {
+    width: calc(100% - 14px);
+  }
+
+  .topbar {
+    flex-direction: column;
+  }
+
+  .top-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .session-chip {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 12vw, 3rem);
+  }
+
+  .arena-head .close {
+    width: 40px;
+    height: 40px;
+  }
+
+  .touch-layout-fighter .touch-btn {
+    font-size: 1rem;
+  }
+
+  .touch-layout-fighter .fighter-action {
+    font-size: 1.3rem;
+  }
+
+  .touch-layout-fighter > .mini-btn {
+    display: none;
+  }
+
+  .chess-frame {
+    padding: 21px;
+  }
+
+  .chess-files {
+    right: 21px;
+    left: 21px;
+  }
+
+  .chess-ranks {
+    top: 21px;
+    bottom: 21px;
+  }
+}
+
+@media (max-height: 560px) and (orientation: landscape) {
+  .arena-shell {
+    display: grid;
+    grid-template: auto auto minmax(0, 1fr) / minmax(0, 1fr) auto;
+  }
+
+  .arena-head {
+    grid-area: 1 / 1 / 2 / -1;
+    padding-block: 5px;
+  }
+
+  .hud {
+    grid-area: 2 / 1 / 3 / -1;
+  }
+
+  .arena-title p,
+  .hud-label {
+    display: none;
+  }
+
+  .hud-item {
+    padding-block: 4px;
+  }
+
+  .stage {
+    grid-area: 3 / 1;
+    padding: 4px;
+  }
+
+  .arena-foot {
+    display: flex;
+    grid-area: 3 / 2;
+    width: min(42vw, 380px);
+    max-height: none;
+    flex-direction: column;
+    border-top: 0;
+    border-left: 1px solid #ffffff12;
+    padding-block: 4px;
+  }
+
+  .arena-foot > .restart {
+    width: 100%;
+  }
+
+  .touch-layout-fighter {
+    flex-direction: column;
+  }
+
+  .touch-layout-fighter .touch-group {
+    width: 100%;
+  }
+
+  .touch-layout-fighter .touch-button-grid {
+    grid-template: repeat(3, 38px) / repeat(3, 38px) minmax(6px, 1fr) repeat(3, 44px);
+  }
+
+  .touch-layout-fighter .fighter-action {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .touch-layout-lanes .touch-button-grid {
+    width: 100%;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(2, minmax(44px, 1fr));
+  }
+}

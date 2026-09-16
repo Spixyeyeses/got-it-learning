@@ -1,0 +1,650 @@
+{
+  "subject": "english-vocabulary",
+  "bankType": "extension",
+  "grades": [
+    {
+      "grade": 5,
+      "themes": [
+        {
+          "id": "g5-discovery",
+          "title": "Curious Scientists",
+          "description": "Words for observing, testing, and explaining",
+          "words": [
+            {
+              "word": "observe",
+              "part": "verb",
+              "definition": "to notice carefully",
+              "example": "We observe how the seedlings change."
+            },
+            {
+              "word": "evidence",
+              "part": "noun",
+              "definition": "facts that support an idea",
+              "example": "The footprints were evidence of an animal."
+            },
+            {
+              "word": "predict",
+              "part": "verb",
+              "definition": "to say what may happen next",
+              "example": "I predict the ice will melt."
+            },
+            {
+              "word": "method",
+              "part": "noun",
+              "definition": "an organized way of doing something",
+              "example": "Their method kept the test fair."
+            },
+            {
+              "word": "conclude",
+              "part": "verb",
+              "definition": "to decide after considering evidence",
+              "example": "We conclude that light helps plants grow."
+            }
+          ]
+        },
+        {
+          "id": "g5-story",
+          "title": "Story Builders",
+          "description": "Words for vivid characters and events",
+          "words": [
+            {
+              "word": "reluctant",
+              "part": "adjective",
+              "definition": "not willing or eager",
+              "example": "Mia was reluctant to enter the cave."
+            },
+            {
+              "word": "fortunate",
+              "part": "adjective",
+              "definition": "having good luck",
+              "example": "We were fortunate to find shelter."
+            },
+            {
+              "word": "conflict",
+              "part": "noun",
+              "definition": "a serious disagreement or struggle",
+              "example": "The lost map creates the story's conflict."
+            },
+            {
+              "word": "vanish",
+              "part": "verb",
+              "definition": "to disappear suddenly",
+              "example": "The fog seemed to vanish."
+            },
+            {
+              "word": "resolve",
+              "part": "verb",
+              "definition": "to settle or solve",
+              "example": "The friends resolve their argument."
+            }
+          ]
+        },
+        {
+          "id": "g5-roots",
+          "title": "Roots Reveal Meaning",
+          "description": "Greek and Latin roots that unlock academic words",
+          "words": [
+            {
+              "word": "audible",
+              "part": "adjective",
+              "definition": "able to be heard",
+              "example": "Her answer was barely audible from the back row."
+            },
+            {
+              "word": "transport",
+              "part": "verb",
+              "definition": "to carry from one place to another",
+              "example": "Trucks transport food to the market."
+            },
+            {
+              "word": "inspect",
+              "part": "verb",
+              "definition": "to look at something carefully",
+              "example": "Inspect the model before turning it in."
+            },
+            {
+              "word": "predict",
+              "part": "verb",
+              "definition": "to state what is likely to happen",
+              "example": "Use the pattern to predict the next term."
+            },
+            {
+              "word": "biography",
+              "part": "noun",
+              "definition": "the written story of a person's life",
+              "example": "We read a biography of the inventor."
+            }
+          ]
+        },
+        {
+          "id": "g5-poetry",
+          "title": "Poetry & Figurative Language",
+          "description": "Words for discussing images, sounds, and comparisons",
+          "words": [
+            {
+              "word": "metaphor",
+              "part": "noun",
+              "definition": "a direct comparison between unlike things",
+              "example": "The phrase time is a thief is a metaphor."
+            },
+            {
+              "word": "rhythm",
+              "part": "noun",
+              "definition": "a pattern of beats or sounds",
+              "example": "The poem has a steady rhythm."
+            },
+            {
+              "word": "imagery",
+              "part": "noun",
+              "definition": "language that appeals to the senses",
+              "example": "The author uses imagery of cold silver rain."
+            },
+            {
+              "word": "stanza",
+              "part": "noun",
+              "definition": "a grouped set of lines in a poem",
+              "example": "The final stanza changes the mood."
+            },
+            {
+              "word": "interpret",
+              "part": "verb",
+              "definition": "to explain the meaning of something",
+              "example": "Readers may interpret the symbol differently."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "grade": 6,
+      "themes": [
+        {
+          "id": "g6-earth",
+          "title": "Changing Earth",
+          "description": "Words for systems and natural change",
+          "words": [
+            {
+              "word": "erosion",
+              "part": "noun",
+              "definition": "the wearing away of rock or soil",
+              "example": "Rain caused erosion along the trail."
+            },
+            {
+              "word": "accumulate",
+              "part": "verb",
+              "definition": "to gather over time",
+              "example": "Sediment can accumulate near a river bend."
+            },
+            {
+              "word": "transform",
+              "part": "verb",
+              "definition": "to change in form",
+              "example": "Heat can transform the material."
+            },
+            {
+              "word": "cycle",
+              "part": "noun",
+              "definition": "a series that repeats",
+              "example": "Water moves through a continuous cycle."
+            },
+            {
+              "word": "impact",
+              "part": "noun",
+              "definition": "a strong effect",
+              "example": "The storm had a major impact."
+            }
+          ]
+        },
+        {
+          "id": "g6-community",
+          "title": "Community & Change",
+          "description": "Words for people, choices, and society",
+          "words": [
+            {
+              "word": "advocate",
+              "part": "verb",
+              "definition": "to publicly support a cause",
+              "example": "Students advocate for a safer crossing."
+            },
+            {
+              "word": "policy",
+              "part": "noun",
+              "definition": "an agreed rule or plan",
+              "example": "The school adopted a recycling policy."
+            },
+            {
+              "word": "cooperate",
+              "part": "verb",
+              "definition": "to work together",
+              "example": "Neighbors cooperate on the garden."
+            },
+            {
+              "word": "responsibility",
+              "part": "noun",
+              "definition": "a duty or obligation",
+              "example": "Voting is a civic responsibility."
+            },
+            {
+              "word": "perspective",
+              "part": "noun",
+              "definition": "a particular way of viewing something",
+              "example": "Listen to each person's perspective."
+            }
+          ]
+        },
+        {
+          "id": "g6-morphology",
+          "title": "Word Parts at Work",
+          "description": "Affixes and roots for reading unfamiliar words",
+          "words": [
+            {
+              "word": "contradict",
+              "part": "verb",
+              "definition": "to state the opposite of another claim",
+              "example": "The new evidence may contradict the first report."
+            },
+            {
+              "word": "portable",
+              "part": "adjective",
+              "definition": "easy to carry or move",
+              "example": "We used a portable microscope outdoors."
+            },
+            {
+              "word": "audience",
+              "part": "noun",
+              "definition": "the people who watch or listen",
+              "example": "Adjust your explanation for the audience."
+            },
+            {
+              "word": "submerge",
+              "part": "verb",
+              "definition": "to put completely under a liquid",
+              "example": "Submerge the sample in water."
+            },
+            {
+              "word": "chronological",
+              "part": "adjective",
+              "definition": "arranged in time order",
+              "example": "List the events in chronological order."
+            }
+          ]
+        },
+        {
+          "id": "g6-tone",
+          "title": "Literature & Tone",
+          "description": "Words for analyzing narrators, mood, and craft",
+          "words": [
+            {
+              "word": "narrator",
+              "part": "noun",
+              "definition": "the voice that tells a story",
+              "example": "The narrator knows only one character's thoughts."
+            },
+            {
+              "word": "suspense",
+              "part": "noun",
+              "definition": "uncertainty or excitement about what may happen",
+              "example": "Short sentences build suspense."
+            },
+            {
+              "word": "symbolize",
+              "part": "verb",
+              "definition": "to represent a larger idea",
+              "example": "The bridge may symbolize change."
+            },
+            {
+              "word": "contrast",
+              "part": "verb",
+              "definition": "to show how things differ",
+              "example": "Contrast the two characters' responses."
+            },
+            {
+              "word": "ironic",
+              "part": "adjective",
+              "definition": "unexpected in a way that highlights a difference",
+              "example": "It is ironic that the lifeguard fears water."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "grade": 7,
+      "themes": [
+        {
+          "id": "g7-evidence",
+          "title": "Argument & Evidence",
+          "description": "Words for strong academic discussion",
+          "words": [
+            {
+              "word": "claim",
+              "part": "noun",
+              "definition": "a statement presented as true",
+              "example": "The writer supports each claim with facts."
+            },
+            {
+              "word": "relevant",
+              "part": "adjective",
+              "definition": "closely connected to the topic",
+              "example": "Choose only relevant evidence."
+            },
+            {
+              "word": "counterargument",
+              "part": "noun",
+              "definition": "an opposing point of view",
+              "example": "The essay answers a counterargument."
+            },
+            {
+              "word": "infer",
+              "part": "verb",
+              "definition": "to reach a conclusion from evidence",
+              "example": "We can infer the character feels nervous."
+            },
+            {
+              "word": "justify",
+              "part": "verb",
+              "definition": "to give good reasons for",
+              "example": "Use the graph to justify your answer."
+            }
+          ]
+        },
+        {
+          "id": "g7-change",
+          "title": "Forces of Change",
+          "description": "Words for causes, effects, and turning points",
+          "words": [
+            {
+              "word": "inevitable",
+              "part": "adjective",
+              "definition": "certain to happen",
+              "example": "Some seasonal change is inevitable."
+            },
+            {
+              "word": "resilient",
+              "part": "adjective",
+              "definition": "able to recover quickly",
+              "example": "The resilient community rebuilt."
+            },
+            {
+              "word": "trigger",
+              "part": "verb",
+              "definition": "to cause something to begin",
+              "example": "One event can trigger a larger movement."
+            },
+            {
+              "word": "significant",
+              "part": "adjective",
+              "definition": "important or large enough to notice",
+              "example": "The law created significant change."
+            },
+            {
+              "word": "consequence",
+              "part": "noun",
+              "definition": "a result of an action",
+              "example": "Every choice has a consequence."
+            }
+          ]
+        },
+        {
+          "id": "g7-research",
+          "title": "Research & Credibility",
+          "description": "Words for evaluating sources and supporting conclusions",
+          "words": [
+            {
+              "word": "corroborate",
+              "part": "verb",
+              "definition": "to confirm with additional evidence",
+              "example": "A second record can corroborate the account."
+            },
+            {
+              "word": "bias",
+              "part": "noun",
+              "definition": "a preference that can distort judgment",
+              "example": "Check the article for possible bias."
+            },
+            {
+              "word": "citation",
+              "part": "noun",
+              "definition": "a reference to the source of information",
+              "example": "Add a citation for the statistic."
+            },
+            {
+              "word": "reliable",
+              "part": "adjective",
+              "definition": "consistently trustworthy or accurate",
+              "example": "A reliable source explains its evidence."
+            },
+            {
+              "word": "paraphrase",
+              "part": "verb",
+              "definition": "to restate an idea in your own words",
+              "example": "Paraphrase the finding without changing its meaning."
+            }
+          ]
+        },
+        {
+          "id": "g7-character",
+          "title": "Character & Theme",
+          "description": "Words for tracing motivation and meaning in literature",
+          "words": [
+            {
+              "word": "motivation",
+              "part": "noun",
+              "definition": "the reason behind an action",
+              "example": "Fear is the character's main motivation."
+            },
+            {
+              "word": "complex",
+              "part": "adjective",
+              "definition": "made of connected parts and not simple",
+              "example": "The novel presents a complex conflict."
+            },
+            {
+              "word": "foreshadow",
+              "part": "verb",
+              "definition": "to hint at what will happen later",
+              "example": "The broken clock may foreshadow trouble."
+            },
+            {
+              "word": "dilemma",
+              "part": "noun",
+              "definition": "a difficult choice between alternatives",
+              "example": "The hero faces a moral dilemma."
+            },
+            {
+              "word": "theme",
+              "part": "noun",
+              "definition": "a central message explored by a text",
+              "example": "Courage is one theme of the story."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "grade": 8,
+      "themes": [
+        {
+          "id": "g8-rhetoric",
+          "title": "Rhetoric & Voice",
+          "description": "Words for analyzing how language persuades",
+          "words": [
+            {
+              "word": "rhetoric",
+              "part": "noun",
+              "definition": "language designed to persuade",
+              "example": "The speech uses powerful rhetoric."
+            },
+            {
+              "word": "connotation",
+              "part": "noun",
+              "definition": "a feeling or idea suggested by a word",
+              "example": "The word home has a warm connotation."
+            },
+            {
+              "word": "nuance",
+              "part": "noun",
+              "definition": "a subtle difference in meaning",
+              "example": "Her tone adds nuance to the statement."
+            },
+            {
+              "word": "credible",
+              "part": "adjective",
+              "definition": "believable and trustworthy",
+              "example": "The article cites credible sources."
+            },
+            {
+              "word": "emphasize",
+              "part": "verb",
+              "definition": "to give special importance to",
+              "example": "Repetition can emphasize a key idea."
+            }
+          ]
+        },
+        {
+          "id": "g8-systems",
+          "title": "Complex Systems",
+          "description": "Words for patterns, structures, and analysis",
+          "words": [
+            {
+              "word": "interdependent",
+              "part": "adjective",
+              "definition": "depending on one another",
+              "example": "The parts of an ecosystem are interdependent."
+            },
+            {
+              "word": "variable",
+              "part": "noun",
+              "definition": "a factor that can change",
+              "example": "Temperature was the tested variable."
+            },
+            {
+              "word": "synthesize",
+              "part": "verb",
+              "definition": "to combine ideas into a new whole",
+              "example": "Synthesize both sources in your response."
+            },
+            {
+              "word": "constraint",
+              "part": "noun",
+              "definition": "a limit or restriction",
+              "example": "Time was the main design constraint."
+            },
+            {
+              "word": "analyze",
+              "part": "verb",
+              "definition": "to examine closely in parts",
+              "example": "Analyze the pattern before deciding."
+            }
+          ]
+        },
+        {
+          "id": "g8-argument",
+          "title": "Academic Argument",
+          "description": "Precise language for reasoning and persuasion",
+          "words": [
+            {
+              "word": "assert",
+              "part": "verb",
+              "definition": "to state confidently as true",
+              "example": "The author asserts that the policy will help."
+            },
+            {
+              "word": "qualify",
+              "part": "verb",
+              "definition": "to limit a statement by adding conditions",
+              "example": "The writer must qualify the broad claim."
+            },
+            {
+              "word": "refute",
+              "part": "verb",
+              "definition": "to prove a claim false with evidence",
+              "example": "Use the data to refute the misconception."
+            },
+            {
+              "word": "coherent",
+              "part": "adjective",
+              "definition": "logical and clearly connected",
+              "example": "The essay presents a coherent argument."
+            },
+            {
+              "word": "implication",
+              "part": "noun",
+              "definition": "a possible result or suggested meaning",
+              "example": "Consider the long-term implication of the choice."
+            }
+          ]
+        },
+        {
+          "id": "g8-ethics",
+          "title": "Innovation & Ethics",
+          "description": "Words for discussing technology, choices, and responsibility",
+          "words": [
+            {
+              "word": "ethical",
+              "part": "adjective",
+              "definition": "consistent with principles of right conduct",
+              "example": "The class debated the ethical use of data."
+            },
+            {
+              "word": "accountability",
+              "part": "noun",
+              "definition": "responsibility for actions and outcomes",
+              "example": "Good systems include public accountability."
+            },
+            {
+              "word": "consent",
+              "part": "noun",
+              "definition": "permission given with understanding",
+              "example": "Researchers must obtain informed consent."
+            },
+            {
+              "word": "equitable",
+              "part": "adjective",
+              "definition": "fair while accounting for different needs",
+              "example": "The team searched for an equitable solution."
+            },
+            {
+              "word": "unintended",
+              "part": "adjective",
+              "definition": "not planned or expected",
+              "example": "The design had an unintended consequence."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "label": "Common Core State Standards",
+      "href": "https://corestandards.org/wp-content/uploads/2023/09/Math_Standards1.pdf",
+      "note": "Grade-level scope and skill progression"
+    },
+    {
+      "label": "Illustrative Mathematics Tasks",
+      "href": "https://tasks.illustrativemathematics.org/",
+      "note": "Open task structures and mathematical practices"
+    },
+    {
+      "label": "Open Up Resources 6–8 Math",
+      "href": "https://access.openupresources.org/curricula/our6-8math-v1/",
+      "note": "CC BY curriculum sequence and lesson contexts"
+    },
+    {
+      "label": "Core Knowledge Language Arts",
+      "href": "https://www.coreknowledge.org/free-resource/ckla-ancillary-materials-fifth-grade/",
+      "note": "Vocabulary and literacy progression"
+    },
+    {
+      "label": "California ELA Language Standards",
+      "href": "https://www2.cde.ca.gov/cacs/id/web/5902",
+      "note": "Context clues, roots, reference skills, and word precision"
+    },
+    {
+      "label": "IM Grade 7 Course Guide",
+      "href": "https://curriculum.illustrativemathematics.org/ms/teachers/2/index.html",
+      "note": "Open unit sequence for algebra, geometry, and probability"
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 3,
+  "catalogId": "cn-mainland-national-curriculum-2026-08",
+  "jurisdiction": "CN-MAINLAND",
+  "releasedAt": "2026-08-10T00:00:00.000Z",
+  "coverageStatus": "seed-registry",
+  "sources": [
+    {
+      "id": "moe-compulsory-2022",
+      "title": "义务教育课程方案和课程标准（2022年版）",
+      "authority": "中华人民共和国教育部",
+      "url": "https://www.moe.gov.cn/srcsite/A26/s8001/202204/t20220420_619921.html",
+      "verifiedAt": "2026-08-10",
+      "usage": "public-standard"
+    },
+    {
+      "id": "moe-textbook-catalog-2024",
+      "title": "2024年义务教育国家课程教学用书目录（根据2022年版课程标准修订）",
+      "authority": "中华人民共和国教育部",
+      "url": "https://www.moe.gov.cn/srcsite/A26/s8001/202408/W020250418502592948423.pdf",
+      "verifiedAt": "2026-08-10",
+      "usage": "catalog-metadata"
+    },
+    {
+      "id": "moe-upper-secondary-2017-2020",
+      "title": "普通高中课程方案和学科课程标准（2017年版2020年修订）",
+      "authority": "中华人民共和国教育部",
+      "url": "https://www.moe.gov.cn/jyb_xxgk/xxgk/neirong/fenlei/kcjc/kcjc_js/kcjcjs_xkkcbz/",
+      "verifiedAt": "2026-08-10",
+      "usage": "public-standard"
+    },
+    {
+      "id": "national-smart-education-platform",
+      "title": "国家中小学智慧教育平台课程教学与数字教材资源",
+      "authority": "中华人民共和国教育部",
+      "url": "https://basic.smartedu.cn/",
+      "verifiedAt": "2026-08-10",
+      "usage": "reference-only"
+    }
+  ],
+  "standards": [
+    {
+      "id": "cn-compulsory-2022",
+      "title": { "zh": "义务教育课程方案和课程标准", "en": "Compulsory Education Curriculum Standards" },
+      "version": "2022",
+      "stage": "compulsory",
+      "effectiveFrom": "2022-09-01",
+      "sourceId": "moe-compulsory-2022",
+      "documentSubjects": ["morality_law", "chinese", "history", "math", "english", "japanese", "russian", "geography", "science", "physics", "chemistry", "biology", "information_technology", "physical_health", "arts", "labor"]
+    },
+    {
+      "id": "cn-upper-secondary-2017-2020",
+      "title": { "zh": "普通高中课程方案和学科课程标准", "en": "Upper Secondary Curriculum Standards" },
+      "version": "2017-2020",
+      "stage": "upper-secondary",
+      "effectiveFrom": "2020-09-01",
+      "sourceId": "moe-upper-secondary-2017-2020",
+      "documentSubjects": ["chinese", "math", "english", "german", "french", "spanish", "japanese", "russian", "ideology_politics", "history", "geography", "physics", "chemistry", "biology", "information_technology", "general_technology", "physical_health", "music", "fine_arts"]
+    }
+  ],
+  "subjects": [
+    { "id": "morality_law", "code": "MORALITY_LAW", "title": { "zh": "道德与法治", "en": "Morality and Rule of Law" }, "mark": "德", "standardId": "cn-compulsory-2022", "stages": ["primary", "junior-secondary"], "typicalGrades": [1,2,3,4,5,6,7,8,9], "availability": "national", "description": { "zh": "法治观念、责任意识、健全人格与政治认同。", "en": "Rule of law, responsibility, character, and civic identity." } },
+    { "id": "chinese", "code": "CHINESE", "title": { "zh": "语文", "en": "Chinese Language" }, "mark": "文", "standardId": "cn-compulsory-2022", "stages": ["primary", "junior-secondary", "upper-secondary"], "typicalGrades": [1,2,3,4,5,6,7,8,9,10,11,12], "availability": "national", "description": { "zh": "识字写字、阅读鉴赏、表达交流与文化理解。", "en": "Literacy, reading, expression, communication, and culture." } },
+    { "id": "history", "code": "HISTORY", "title": { "zh": "历史", "en": "History" }, "mark": "史", "standardId": "cn-compulsory-2022", "stages": ["junior-secondary", "upper-secondary"], "typicalGrades": [7,8,9,10,11,12], "availability": "national", "description": { "zh": "时空观念、史料实证、历史解释与家国情怀。", "en": "Chronology, evidence, interpretation, and historical identity." } },
+    { "id": "math", "code": "MATHEMATICS", "title": { "zh": "数学", "en": "Mathematics" }, "mark": "Σ", "standardId": "cn-compulsory-2022", "stages": ["primary", "junior-secondary", "upper-secondary"], "typicalGrades": [1,2,3,4,5,6,7,8,9,10,11,12], "availability": "national", "description": { "zh": "数与代数、图形与几何、统计与概率、综合与实践。", "en": "Number, algebra, geometry, statistics, probability, and practice." } },
+    { "id": "english", "code": "ENGLISH", "title": { "zh": "英语", "en": "English" }, "mark": "Aa", "standardId": "cn-compulsory-2022", "stages": ["primary", "junior-secondary", "upper-secondary"], "typicalGrades": [3,4,5,6,7,8,9,10,11,12], "availability": "foreign-language-alternative", "description": { "zh": "语言能力、文化意识、思维品质与学习能力。", "en": "Language, culture, thinking, and learning strategies." } },
+    { "id": "japanese", "code": "JAPANESE", "title": { "zh": "日语", "en": "Japanese" }, "mark": "あ", "standardId": "cn-compulsory-2022", "stages": ["junior-secondary", "upper-secondary"], "typicalGrades": [7,8,9,10,11,12], "availability": "foreign-language-alternative", "description": { "zh": "作为外语课程选项实施，具体开设由地区和学校确定。", "en": "An alternative foreign-language curriculum determined locally." } },
+    { "id": "russian", "code": "RUSSIAN", "title": { "zh": "俄语", "en": "Russian" }, "mark": "Я", "standardId": "cn-compulsory-2022", "stages": ["junior-secondary", "upper-secondary"], "typicalGrades": [7,8,9,10,11,12], "availability": "foreign-language-alternative", "description": { "zh": "作为外语课程选项实施，具体开设由地区和学校确定。", "en": "An alternative foreign-language curriculum determined locally." } },
+    { "id": "geography", "code": "GEOGRAPHY", "title": { "zh": "地理", "en": "Geography" }, "mark": "地", "standardId": "cn-compulsory-2022", "stages": ["junior-secondary", "upper-secondary"], "typicalGrades": [7,8,10,11,12], "availability": "national", "description": { "zh": "区域认知、综合思维、地理实践力与人地协调观。", "en": "Regions, systems thinking, field practice, and human–environment relations." } },
+    { "id": "science", "code": "SCIENCE", "title": { "zh": "科学", "en": "Science" }, "mark": "⌁", "standardId": "cn-compulsory-2022", "stages": ["primary", "junior-secondary"], "typicalGrades": [1,2,3,4,5,6,7,8,9], "availability": "regional-choice", "description": { "zh": "科学观念、科学思维、探究实践与态度责任。", "en": "Scientific ideas, reasoning, inquiry, and responsibility." } },
+    { "id": "physics", "code": "PHYSICS", "title": { "zh": "物理", "en": "Physics" }, "mark": "Φ", "standardId": "cn-compulsory-2022", "stages": ["junior-secondary", "upper-secondary"], "typicalGrades": [8,9,10,11,12], "availability": "national", "description": { "zh": "物质、运动与相互作用、能量及实验探究。", "en": "Matter, motion, interaction, energy, and experimental inquiry." } },
+    { "id": "chemistry", "code": "CHEMISTRY", "title": { "zh": "化学", "en": "Chemistry" }, "mark": "化", "standardId": "cn-compulsory-2022", "stages": ["junior-secondary", "upper-secondary"], "typicalGrades": [9,10,11,12], "availability": "national", "description": { "zh": "物质组成、结构、性质、转化与化学实验。", "en": "Composition, structure, properties, transformation, and experiments." } },
+    { "id": "biology", "code": "BIOLOGY", "title": { "zh": "生物学", "en": "Biology" }, "mark": "生", "standardId": "cn-compulsory-2022", "stages": ["junior-secondary", "upper-secondary"], "typicalGrades": [7,8,10,11,12], "availability": "national", "description": { "zh": "生命观念、科学思维、探究实践与社会责任。", "en": "Life concepts, reasoning, inquiry, and social responsibility." } },
+    { "id": "information_technology", "code": "INFORMATION_TECH", "title": { "zh": "信息科技", "en": "Information Technology" }, "mark": "信", "standardId": "cn-compulsory-2022", "stages": ["primary", "junior-secondary", "upper-secondary"], "typicalGrades": [1,2,3,4,5,6,7,8,9,10,11,12], "availability": "national", "description": { "zh": "信息意识、计算思维、数字化学习与信息社会责任。", "en": "Information awareness, computational thinking, digital learning, and responsibility." } },
+    { "id": "physical_health", "code": "PHYSICAL_HEALTH", "title": { "zh": "体育与健康", "en": "Physical Education and Health" }, "mark": "体", "standardId": "cn-compulsory-2022", "stages": ["primary", "junior-secondary", "upper-secondary"], "typicalGrades": [1,2,3,4,5,6,7,8,9,10,11,12], "availability": "national", "description": { "zh": "运动能力、健康行为与体育品德。", "en": "Movement skills, healthy behavior, and sportsmanship." } },
+    { "id": "arts", "code": "ARTS", "title": { "zh": "艺术", "en": "Arts" }, "mark": "艺", "standardId": "cn-compulsory-2022", "stages": ["primary", "junior-secondary", "upper-secondary"], "typicalGrades": [1,2,3,4,5,6,7,8,9,10,11,12], "availability": "national", "description": { "zh": "审美感知、艺术表现、创意实践与文化理解。", "en": "Aesthetic perception, expression, creativity, and culture." } },
+    { "id": "labor", "code": "LABOR", "title": { "zh": "劳动", "en": "Labor Education" }, "mark": "劳", "standardId": "cn-compulsory-2022", "stages": ["primary", "junior-secondary"], "typicalGrades": [1,2,3,4,5,6,7,8,9], "availability": "national", "description": { "zh": "劳动观念、劳动能力、劳动习惯品质与劳动精神。", "en": "Labor values, skills, habits, quality, and spirit." } },
+    { "id": "ideology_politics", "code": "IDEOLOGY_POLITICS", "title": { "zh": "思想政治", "en": "Ideology and Politics" }, "mark": "政", "standardId": "cn-upper-secondary-2017-2020", "stages": ["upper-secondary"], "typicalGrades": [10,11,12], "availability": "national", "description": { "zh": "政治认同、科学精神、法治意识与公共参与。", "en": "Political identity, scientific spirit, rule of law, and public participation." } },
+    { "id": "general_technology", "code": "GENERAL_TECH", "title": { "zh": "通用技术", "en": "General Technology" }, "mark": "技", "standardId": "cn-upper-secondary-2017-2020", "stages": ["upper-secondary"], "typicalGrades": [10,11,12], "availability": "national", "description": { "zh": "技术意识、工程思维、创新设计、图样表达与物化能力。", "en": "Technology, engineering thinking, design, representation, and making." } },
+    { "id": "music", "code": "MUSIC", "title": { "zh": "音乐", "en": "Music" }, "mark": "乐", "standardId": "cn-upper-secondary-2017-2020", "stages": ["upper-secondary"], "typicalGrades": [10,11,12], "availability": "national", "description": { "zh": "音乐审美、表现、文化理解与艺术实践。", "en": "Musical aesthetics, performance, culture, and practice." } },
+    { "id": "fine_arts", "code": "FINE_ARTS", "title": { "zh": "美术", "en": "Fine Arts" }, "mark": "美", "standardId": "cn-upper-secondary-2017-2020", "stages": ["upper-secondary"], "typicalGrades": [10,11,12], "availability": "national", "description": { "zh": "图像识读、美术表现、审美判断、创意实践与文化理解。", "en": "Visual literacy, art-making, aesthetic judgment, creativity, and culture." } },
+    { "id": "german", "code": "GERMAN", "title": { "zh": "德语", "en": "German" }, "mark": "De", "standardId": "cn-upper-secondary-2017-2020", "stages": ["upper-secondary"], "typicalGrades": [10,11,12], "availability": "foreign-language-alternative", "description": { "zh": "普通高中外语课程选项，具体开设由地区和学校确定。", "en": "An upper-secondary foreign-language option determined locally." } },
+    { "id": "french", "code": "FRENCH", "title": { "zh": "法语", "en": "French" }, "mark": "Fr", "standardId": "cn-upper-secondary-2017-2020", "stages": ["upper-secondary"], "typicalGrades": [10,11,12], "availability": "foreign-language-alternative", "description": { "zh": "普通高中外语课程选项，具体开设由地区和学校确定。", "en": "An upper-secondary foreign-language option determined locally." } },
+    { "id": "spanish", "code": "SPANISH", "title": { "zh": "西班牙语", "en": "Spanish" }, "mark": "Es", "standardId": "cn-upper-secondary-2017-2020", "stages": ["upper-secondary"], "typicalGrades": [10,11,12], "availability": "foreign-language-alternative", "description": { "zh": "普通高中外语课程选项，具体开设由地区和学校确定。", "en": "An upper-secondary foreign-language option determined locally." } }
+  ],
+  "textbookSeries": [
+    { "id": "national-unified-chinese", "title": "国家统编义务教育教科书·语文", "publisher": "人民教育出版社", "subjectIds": ["chinese"], "academicSystems": ["both"], "catalogSourceId": "moe-textbook-catalog-2024", "contentRights": "metadata-only" },
+    { "id": "national-unified-morality-law", "title": "国家统编义务教育教科书·道德与法治", "publisher": "人民教育出版社", "subjectIds": ["morality_law"], "academicSystems": ["both"], "catalogSourceId": "moe-textbook-catalog-2024", "contentRights": "metadata-only" },
+    { "id": "national-unified-history", "title": "国家统编义务教育教科书·历史", "publisher": "人民教育出版社", "subjectIds": ["history"], "academicSystems": ["both"], "catalogSourceId": "moe-textbook-catalog-2024", "contentRights": "metadata-only" },
+    { "id": "pep-math", "title": "义务教育教科书·数学（人教版）", "publisher": "人民教育出版社", "subjectIds": ["math"], "academicSystems": ["6-3"], "catalogSourceId": "moe-textbook-catalog-2024", "contentRights": "metadata-only" },
+    { "id": "pep-english", "title": "义务教育教科书·英语（人教版）", "publisher": "人民教育出版社", "subjectIds": ["english"], "academicSystems": ["6-3"], "catalogSourceId": "moe-textbook-catalog-2024", "contentRights": "metadata-only" },
+    { "id": "pep-science", "title": "义务教育教科书·科学（人教版）", "publisher": "人民教育出版社、湖北教育出版社", "subjectIds": ["science"], "academicSystems": ["6-3"], "catalogSourceId": "moe-textbook-catalog-2024", "contentRights": "metadata-only" },
+    { "id": "bnu-math", "title": "义务教育教科书·数学（北师大版）", "publisher": "北京师范大学出版社", "subjectIds": ["math"], "academicSystems": ["6-3"], "catalogSourceId": "moe-textbook-catalog-2024", "contentRights": "metadata-only" },
+    { "id": "su-math", "title": "义务教育教科书·数学（苏教版）", "publisher": "江苏凤凰教育出版社", "subjectIds": ["math"], "academicSystems": ["6-3"], "catalogSourceId": "moe-textbook-catalog-2024", "contentRights": "metadata-only" },
+    { "id": "fltrp-english", "title": "义务教育教科书·英语（外研版）", "publisher": "外语教学与研究出版社", "subjectIds": ["english"], "academicSystems": ["6-3"], "catalogSourceId": "moe-textbook-catalog-2024", "contentRights": "metadata-only" }
+  ],
+  "packages": [
+    {
+      "id": "cn-2022-math-g1-pilot",
+      "manifestUrl": "./data/curriculum/packages/cn-2022-math-g1-pilot/package.json",
+      "enabled": true,
+      "priority": 100,
+      "fallbackPolicy": "replace-level",
+      "subjectId": "math",
+      "grade": 1,
+      "term": "first",
+      "academicSystems": ["6-3"],
+      "textbookSeriesId": null,
+      "preload": true
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#080b12">
+  <title>学会啦 · 受控休息区</title>
+  <link rel="stylesheet" href="styles/games.css">
+  <link rel="stylesheet" href="styles/touch-controls.css">
+  <link rel="stylesheet" href="styles/tactile-v8.css">
+  <link rel="stylesheet" href="styles/icon-controls-v9.css">
+  <script src="src/games/access-gate.js"></script>
+</head>
+<body>
+  <a class="skip-link arcade-skip" href="#gameLibrary">跳到游戏列表</a>
+  <main class="shell">
+    <header class="topbar"><a class="brand" href="index.html"><span class="brand-mark">◇</span> <span data-t="brand">学会啦 · 休息区</span></a><div class="top-actions"><div class="session-chip">⏳ <span data-t="timeLeft">剩余时间</span> <strong id="playTimeTop">--:--</strong></div><div class="lang-switch"><button id="arcadeEn">英文</button><button id="arcadeZh" class="active">中文</button></div><a class="back" href="index.html" data-t="back">← 返回学习</a></div></header>
+    <section class="hero"><span class="eyebrow" data-t="eyebrow">受控休息区 · 每日有上限</span><h1 data-t="headline">选一种玩法，短暂放松。</h1><p data-t="intro">休息时间由家长规则和倒计时共同控制。无需联网匹配，记录只保存在本机。</p><div class="hero-stats"><span class="pill" data-t="six">🎮 11 款完整游戏</span><span class="pill" data-t="modes">🤖 电脑 + 本地双人</span><span class="pill" data-t="localBest">🏆 本地最高分</span></div></section>
+    <section class="games" id="gameLibrary" aria-label="游戏列表" tabindex="-1">
+      <button class="game-card featured" data-game="stick" style="--accent:#ff5b7f"><span class="popular-badge" id="popularBadge">🔥 人气超高！</span><span class="game-icon">☀️⚔️🌙</span><h2 data-game-title="stick">火柴人格斗 · 光暗对决</h2><p data-game-desc="stick">选择光或暗的独立技能组；暗系可穿过敌人，并以红黑能量路径持续灼烧。</p><div class="game-meta"><span data-game-kind="stick">格斗 · 光 / 暗</span><span data-high="stick">最高 0</span></div></button>
+      <button class="game-card" data-game="reaction" style="--accent:#35e884"><span class="game-icon">⚡👆</span><h2 data-game-title="reaction">反应力测试</h2><p data-game-desc="reaction">保持专注，等整个界面变绿后立刻点击，以毫秒测出你的真实反应速度。</p><div class="game-meta"><span data-game-kind="reaction">反应 · 单人</span><span data-high="reaction">最佳 —</span></div></button>
+      <button class="game-card" data-game="gomoku" style="--accent:#e5b85a"><span class="game-icon">⚫⚪</span><h2 data-game-title="gomoku">曜石五子棋</h2><p data-game-desc="gomoku">传统金木棋盘与精致落子特效，挑战三档电脑对手，或与朋友同屏对弈。</p><div class="game-meta"><span data-game-kind="gomoku">棋类 · 电脑 / 双人</span><span data-high="gomoku">最高 0</span></div></button>
+      <button class="game-card" data-game="rhythm" style="--accent:#9b6cff"><span class="game-icon">💠</span><h2 data-game-title="rhythm">反应堆节拍</h2><p data-game-desc="rhythm">守住四条能量轨道，在判定线捕获脉冲并维持连击。</p><div class="game-meta"><span data-game-kind="rhythm">节奏 · 反应</span><span data-high="rhythm">最高 0</span></div></button>
+      <button class="game-card" data-game="pacman" style="--accent:#ffc857"><span class="game-icon">🟡👻</span><h2 data-game-title="pacman">吃豆人 · 经典迷宫</h2><p data-game-desc="pacman">穿过霓虹迷宫吃光豆子，利用能量豆反击四只各具个性的幽灵。</p><div class="game-meta"><span data-game-kind="pacman">迷宫 · 追逐</span><span data-high="pacman">最高 0</span></div></button>
+      <button class="game-card" data-game="snake" style="--accent:#52f59a"><span class="game-icon">●━●</span><h2 data-game-title="snake">霓虹贪吃蛇</h2><p data-game-desc="snake">转向、成长并穿过越来越紧张的网格，连续吃下能量果实。</p><div class="game-meta"><span data-game-kind="snake">经典 · 生存</span><span data-high="snake">最高 0</span></div></button>
+      <button class="game-card" data-game="breakout" style="--accent:#ff8a5b"><span class="game-icon">▰ ◉</span><h2 data-game-title="breakout">棱镜打砖块</h2><p data-game-desc="breakout">控制挡板改变反弹角度，以连续击破和精准接球清空砖墙。</p><div class="game-meta"><span data-game-kind="breakout">经典 · 反弹</span><span data-high="breakout">最高 0</span></div></button>
+      <button class="game-card" data-game="blocks" style="--accent:#a87cff"><span class="game-icon">▟▙</span><h2 data-game-title="blocks">经典落块</h2><p data-game-desc="blocks">旋转、暂存并快速落下方块，用连续消除保持棋盘清爽。</p><div class="game-meta"><span data-game-kind="blocks">经典 · 消除</span><span data-high="blocks">最高 0</span></div></button>
+      <button class="game-card" data-game="invaders" style="--accent:#61d8ff"><span class="game-icon">⌄ ⋰⋱</span><h2 data-game-title="invaders">像素太空防线</h2><p data-game-desc="invaders">守住底线，击退整齐推进的像素舰队，并在短波次中保持连击。</p><div class="game-meta"><span data-game-kind="invaders">经典 · 射击</span><span data-high="invaders">最高 0</span></div></button>
+      <button class="game-card" data-game="chess" style="--accent:#e7d7b5"><span class="game-icon">♔♚</span><h2 data-game-title="chess">国际象棋 · 白棋对黑棋</h2><p data-game-desc="chess">经典木纹棋盘与棋子滑行动画，挑战三档电脑对手，或与朋友同屏对弈。</p><div class="game-meta"><span data-game-kind="chess">棋类 · 电脑 / 双人</span><span data-high="chess">最高 0</span></div></button>
+      <button class="game-card" data-game="battleship" style="--accent:#38bdf8"><span class="game-icon">⚓</span><h2 data-game-title="battleship">深空海战</h2><p data-game-desc="battleship">亲自部署五艘舰船，命中即可连续开火；支持三档电脑对手与隐私双人战。</p><div class="game-meta"><span data-game-kind="battleship">推理 · 电脑 / 双人</span><span data-high="battleship">最高 0</span></div></button>
+    </section>
+  </main>
+  <section class="arena" id="arena" hidden aria-modal="true" role="dialog">
+    <div class="arena-shell"><header class="arena-head"><div class="arena-title"><h2 id="arenaTitle"></h2><p id="arenaDesc"></p></div><div class="arena-head-actions"><button class="fullscreen-toggle" id="fullscreenGame" type="button">⛶ <span>全屏</span></button><button class="close icon-close-v9" id="closeGame" aria-label="关闭游戏"><span class="close-glyph-v9" aria-hidden="true"></span></button></div></header>
+      <div class="hud"><div class="hud-item"><span class="hud-label" data-t="score">得分</span><span class="hud-value" id="scoreValue">0</span></div><div class="hud-item"><span class="hud-label" data-t="status">状态</span><span class="hud-value" id="statusValue" aria-live="polite">准备就绪</span></div><div class="hud-item"><span class="hud-label" data-t="best">最高</span><span class="hud-value" id="bestValue">0</span></div><div class="hud-item"><span class="hud-label" data-t="timeLeft">剩余时间</span><span class="hud-value hud-time" id="playTimeHud">--:--</span></div></div>
+      <div class="stage" id="stage"><canvas id="gameCanvas" width="760" height="480"></canvas><div class="dom-game" id="domGame" hidden></div><div class="result" id="result" hidden><div class="result-card"><h3 id="resultTitle">本局结束</h3><p id="resultText"></p><button class="restart" id="resultRestart" data-t="playAgain">再玩一次</button></div></div></div>
+      <footer class="arena-foot"><div class="help" id="helpText"></div><div class="touch-controls" id="touchControls"></div><button class="restart" id="restartGame" data-t="restart">重新开始</button></footer>
+    </div>
+  </section>
+  <script src="src/games/online.js"></script>
+  <script src="src/games/core.js"></script>
+  <script src="src/games/gomoku.js"></script>
+  <script src="src/games/rhythm.js"></script>
+  <script src="src/games/reaction.js"></script>
+  <script src="src/games/pacman.js"></script>
+  <script src="src/games/snake.js"></script>
+  <script src="src/games/breakout.js"></script>
+  <script src="src/games/blocks.js"></script>
+  <script src="src/games/invaders.js"></script>
+  <script src="src/games/stick.js"></script>
+  <script src="src/games/chess.js"></script>
+  <script src="src/games/battleship.js"></script>
+  <script src="src/games/lifecycle.js"></script>
+  <script src="src/app/tactile-v8.js"></script>
+</body>
+</html>

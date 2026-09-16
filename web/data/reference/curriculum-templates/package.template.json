@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 3,
+  "id": "replace-package-id",
+  "subjectId": "replace-subject-id",
+  "jurisdiction": "CN-MAINLAND",
+  "academicSystem": "6-3",
+  "grade": 1,
+  "term": "first",
+  "provider": {
+    "id": "got-it-original-curriculum-lab",
+    "name": "学会啦课程内容实验室",
+    "license": "Platform-original items; redistribution not granted",
+    "sourceUrl": "https://www.moe.gov.cn/",
+    "contentKind": "original-standard-aligned"
+  },
+  "standardRefs": ["replace-standard-reference"],
+  "textbookMapping": {
+    "seriesId": null,
+    "isbn": null,
+    "status": "not-mapped",
+    "rights": "none",
+    "notice": "依据公开课程标准编写原创内容，不复制教材正文、插图或原题。"
+  },
+  "release": {
+    "version": "0.0.1",
+    "publishedAt": "2026-08-12T00:00:00.000Z",
+    "status": "pilot",
+    "reviewStage": "draft",
+    "reviewedBy": ["author-draft"]
+  },
+  "shards": [
+    {
+      "id": "replace-shard-id",
+      "url": "./data/curriculum/packages/replace-package-id/unit-1.json",
+      "kind": "mixed"
+    }
+  ]
+}

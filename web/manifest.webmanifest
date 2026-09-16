@@ -1,0 +1,21 @@
+{
+  "name": "学会啦",
+  "short_name": "学会啦",
+  "description": "按课程、知识点、订正与间隔复习建立真实掌握。",
+  "lang": "zh-CN",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#08110e",
+  "theme_color": "#0b1713",
+  "categories": ["education"],
+  "icons": [
+    {
+      "src": "assets/nameless-academy-logo.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
