@@ -1,6 +1,7 @@
 * text=auto eol=lf
 # Preserve original bytes and curriculum SHA-256 checks on every platform.
 web/** -text
+docs/original/** -text
 *.png binary
 *.jpg binary
 *.woff2 binary

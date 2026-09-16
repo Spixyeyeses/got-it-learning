@@ -1,0 +1,54 @@
+{
+  "name": "got-it-learning",
+  "version": "0.1.0",
+  "description": "学会啦 — local learning, practice and reward games",
+  "private": true,
+  "license": "UNLICENSED",
+  "main": "desktop/main.cjs",
+  "engines": { "node": ">=24 <25" },
+  "scripts": {
+    "prestart": "npm run build:web",
+    "start": "node tools/serve.mjs",
+    "build:web": "node tools/build-web.mjs",
+    "build:data": "node tools/build-data.mjs --write",
+    "predesktop": "npm run build:web",
+    "desktop": "electron .",
+    "build:win": "node tools/build-win.mjs",
+    "check": "node tools/check-source.mjs && node tools/build-data.mjs --check",
+    "verify:original": "node tools/verify-original.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:e2e": "playwright test",
+    "test:desktop": "node tools/smoke-desktop.cjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "electron": "44.4.1",
+    "electron-builder": "26.15.3"
+  },
+  "allowScripts": { "electron-winstaller@5.4.0": false },
+  "build": {
+    "appId": "org.gotitlearning.desktop",
+    "productName": "Got It Learning",
+    "copyright": "Original project and third-party rights retained",
+    "directories": { "output": "dist/desktop", "buildResources": "build" },
+    "files": ["desktop/**/*", "tools/static-server.cjs", "dist/web/**/*", "docs/THIRD_PARTY_NOTICES.md", "package.json"],
+    "asar": true,
+    "npmRebuild": false,
+    "win": {
+      "target": [{ "target": "portable", "arch": ["x64"] }, { "target": "nsis", "arch": ["x64"] }],
+      "icon": "web/assets/nameless-academy-logo.png",
+      "artifactName": "Got-It-Learning-${version}-${arch}.${ext}"
+    },
+    "nsis": {
+      "artifactName": "Got-It-Learning-${version}-${arch}-setup.${ext}",
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "deleteAppDataOnUninstall": false,
+      "createDesktopShortcut": true,
+      "shortcutName": "学会啦"
+    },
+    "portable": { "requestExecutionLevel": "user", "artifactName": "Got-It-Learning-${version}-${arch}-portable.${ext}" },
+    "publish": null
+  }
+}
