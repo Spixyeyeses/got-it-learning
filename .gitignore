@@ -15,3 +15,7 @@ Thumbs.db
 *.pfx
 *.p12
 *.pem
+
+# Local IntelliJ IDEA configuration
+.idea/
+*.iml
